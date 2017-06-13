@@ -15,6 +15,10 @@ get_header(); ?>
 			<?php // open the WordPress loop
 			if (have_posts()) : while (have_posts()) : the_post();
 
+				if ( has_post_thumbnail() ) {
+					the_post_thumbnail('full'); 
+				};
+
 				// are there any rows within within our flexible content?
 				if( have_rows('home_page_content') ): 
 
@@ -30,8 +34,8 @@ get_header(); ?>
 						get_template_part('template-parts/content', 'featured');
 
 					// NEWSLETTER FORM
-					if( get_row_layout() == 'form' )
-						get_template_part('template-parts/section', 'form');
+					if( get_row_layout() == 'newsletter' )
+						get_template_part('template-parts/section', 'newsletter');
 
 					// GALLERY
 					if( get_row_layout() == 'gallery' )

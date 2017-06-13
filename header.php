@@ -25,8 +25,11 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
+	<?php if ( ! is_front_page() ) : ?>
+
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="left-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lion' ); ?></button>
+
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'left-menu' ) ); ?>
 
             <?php if ( get_theme_mod( 'lion_logo' ) ) : ?>
@@ -41,6 +44,11 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'right-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+
+		<?php else : ?>
+
+		<?php endif; ?>
+		
 	</header><!-- #masthead -->
 
 	<?php if ( is_home() ): ?>

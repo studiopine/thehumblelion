@@ -19,10 +19,18 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-4', 'menu_id' => 'footer-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 
+		<div id="footer-social">
+			<ul>
+				<li><a href="<?php the_field( 'instagram', 'options' ) ?>" target="_blank">Instagram</a></li>
+				<li><a href="<?php the_field( 'facebook', 'options' ) ?>" target="_blank">Facebook</a></li>
+				<li><a href="<?php the_field( 'pinterest', 'options' ) ?>" target="_blank">Pinterest</a></li>
+			</ul>
+		</div>
+
 		<div class="site-info">
 			<p>
-				&copy; 2016–<?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?></br>
-				<?php printf( esc_html__( 'Site design by %2$s.', 'lion' ), 'lion', '<a href="https://automattic.com/" rel="designer">Studio Pine</a>' ); ?>
+				<?php the_field('copyright', 'option'); ?></br>
+				<?php the_field('credits', 'option'); ?>
 			</p>
 		</div><!-- .site-info -->
 
@@ -34,6 +42,8 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
+
+			<?php the_field('author_details', 'option'); ?>
 
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 

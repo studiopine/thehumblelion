@@ -102,13 +102,41 @@ function lion_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	register_sidebar( array(
-		'name'        	=> esc_html__( 'Footer Details', 'lion' ),
-		'id'         	=> 'footer-widget',
-		'description' 	=> esc_html__( 'Add footer widgets here.', 'lion' ),
-	) );
 }
 add_action( 'widgets_init', 'lion_widgets_init' );
+
+// Exclude Wisdom quotes from Blog page
+function exclude_category( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'cat', '-70' );
+    }
+}
+add_action( 'pre_get_posts', 'exclude_category' );
+
+// Options page
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Theme Header Settings',
+	// 	'menu_title'	=> 'Header',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
+	
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Theme Footer Settings',
+	// 	'menu_title'	=> 'Footer',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
+	
+}
 
 /**
  * Enqueue scripts and styles.

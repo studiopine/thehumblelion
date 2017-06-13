@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The category template file
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -22,7 +22,7 @@ get_header(); ?>
 
 			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<h1 class="page-title screen-reader-text">Category: <?php single_cat_title( '', false ); ?></h1>
 				</header>
 
 			<?php
@@ -53,8 +53,6 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 	<?php get_template_part( 'template-parts/content', 'featured' ); ?><!-- #featured-posts -->
-
-	<?php get_template_part( 'template-parts/section', 'blogform' ); ?><!-- #blog-form -->
 
 <?php
 get_sidebar();
