@@ -4,9 +4,11 @@
 		the_sub_field('subheading');
 	}
 
-	if ( get_sub_field('heading') ) {
-		the_sub_field('heading');
-	}
+	if ( get_sub_field('heading') ) { ?>
+
+		<h1><?php the_sub_field('heading'); ?></h1>
+
+	<?php }
 
 	// check if the repeater field has rows of data
 	if( have_rows('services') ):

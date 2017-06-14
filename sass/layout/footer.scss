@@ -1,0 +1,35 @@
+// Footer styling
+
+#colophon {
+	background-color: $dustyblue;
+	color: $lightgrey;
+	a {
+		color: $lightgrey;
+		text-decoration: none;
+	}
+	.site-info {
+		font-size: 11px;
+	}
+	.footer-site-title {
+		font-weight: 500;
+	}
+}
+
+// Footer layout	
+#colophon {
+	padding: 110px 50px 50px 50px;
+	#footer-left {
+		float: left;
+		width: 50%;
+		text-align: left;
+		.footer-navigation {
+			padding-bottom: 40px;
+			max-width: 250px;
+		}
+	}
+	#footer-right {
+		float: right;
+		width: 50%;
+		text-align: right;
+	}
+}

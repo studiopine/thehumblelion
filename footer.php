@@ -15,7 +15,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<nav id="footer-navigation" class="footer-navigation" role="navigation">
+	<div id="footer-left">
+
+		<nav id="footer-navigation" class="footer-navigation two-column" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-4', 'menu_id' => 'footer-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 
@@ -34,20 +36,21 @@
 			</p>
 		</div><!-- .site-info -->
 
+	</div><!-- #footer-left -->
+
+	<div id="footer-right">
+
 		<div class="site-branding">
 
-			<?php	
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+			<p class="site-description"><?php the_field('tagline', 'option'); ?></p>
 
-			<?php the_field('author_details', 'option'); ?>
+			<p class="author-description"><?php the_field('author_details', 'option'); ?></p>
 
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<h1 class="footer-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 		</div><!-- .site-branding -->
+
+	</div><!-- #footer-right -->
 		
 	</footer><!-- #colophon -->
 </div><!-- #page -->

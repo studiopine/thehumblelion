@@ -108,7 +108,7 @@ add_action( 'widgets_init', 'lion_widgets_init' );
 // Exclude Wisdom quotes from Blog page
 function exclude_category( $query ) {
     if ( $query->is_home() && $query->is_main_query() ) {
-        $query->set( 'cat', '-70' );
+        $query->set( 'cat', '-51' );
     }
 }
 add_action( 'pre_get_posts', 'exclude_category' );

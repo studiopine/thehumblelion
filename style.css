@@ -233,6 +233,13 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h1 {
+  font-size: 38px;
+  line-height: 52px;
+  letter-spacing: 0.15px;
+  font-weight: 500;
+  color: #231f20; }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -414,11 +421,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #233a4a; }
+  color: #7d5a46; }
   a:visited {
-    color: #121a25; }
+    color: #7d5a46; }
   a:hover, a:focus, a:active {
-    color: #121a25; }
+    color: #7d5a46; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -470,6 +477,26 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none; }
+
+.footer-navigation {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  -moz-column-gap: 20px; }
+  .footer-navigation ul {
+    margin: 0;
+    padding: 0; }
+    .footer-navigation ul li {
+      list-style: none; }
+
+#footer-social ul {
+  margin: 0;
+  padding: 0; }
+  #footer-social ul li {
+    list-style: none;
+    display: inline-block; }
 
 /* Small menu. */
 .menu-toggle,
@@ -632,6 +659,31 @@ a {
 .blog .content-area {
   max-width: 800px;
   margin: 0 auto; }
+
+#colophon {
+  background-color: #233a4a;
+  color: #b1b3b6; }
+  #colophon a {
+    color: #b1b3b6;
+    text-decoration: none; }
+  #colophon .site-info {
+    font-size: 11px; }
+  #colophon .footer-site-title {
+    font-weight: 500; }
+
+#colophon {
+  padding: 110px 50px 50px 50px; }
+  #colophon #footer-left {
+    float: left;
+    width: 50%;
+    text-align: left; }
+    #colophon #footer-left .footer-navigation {
+      padding-bottom: 40px;
+      max-width: 250px; }
+  #colophon #footer-right {
+    float: right;
+    width: 50%;
+    text-align: right; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
