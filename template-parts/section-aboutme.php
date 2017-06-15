@@ -1,3 +1,4 @@
+<div class="about-me">
 <?php 
 
 	if ( get_sub_field('subheading') ) {
@@ -23,3 +24,5 @@
 ?>
 
 <img src="<?php the_sub_field('photo'); ?>" alt="" />
+
+</div>

@@ -1,3 +1,4 @@
+<div class="<?php if ( is_front_page() ) : ?>home-gallery<?php else : ?>gallery<?php endif; ?>">
 <?php 
 
 	if ( get_sub_field('heading') ) { ?>
@@ -13,3 +14,4 @@
 	}
 
 ?>
+</div>

@@ -1,11 +1,14 @@
-<?php 
+<div id="tagline">
+	<?php 
 
-	if ( get_sub_field('the_text') ) { ?>
+		if ( get_sub_field('the_text') ) { ?>
 
-		<h1><?php the_sub_field('the_text'); ?></h1>
+			<h1><?php the_sub_field('the_text'); ?></h1>
 
-	<?php }
+		<?php }
 
-?>
+	?>
 
-<img id="thl-logomark" src="<?php the_sub_field('the_image'); ?>" alt="" />
+	<img id="thl-logomark" src="<?php the_sub_field('the_image'); ?>" alt="" />
+	
+</div>

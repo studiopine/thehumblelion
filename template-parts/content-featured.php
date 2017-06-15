@@ -11,7 +11,7 @@
 
 <div id="featured-posts">
 	
-	<h3>The Latest</h3>
+	<div class="left">The Latest</div>
 
 	<?php
 	$args = array(
@@ -30,7 +30,7 @@
 					
 					<header class="featured-entry-header">
 						
-						<?php the_post_thumbnail( 'thumbnail' ); ?>
+						<?php the_post_thumbnail( 'featured-post' ); ?>
 
 						<div class="feautred-entry-meta">
 							<?php lion_posted_on(); ?>
@@ -52,6 +52,6 @@
 	wp_reset_query();
 	?>
 
-	<h3>Favorites</h3>
+	<div class="right">Favorites</div>
 
 </div><!-- #featured-posts -->

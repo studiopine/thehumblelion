@@ -42,9 +42,9 @@
 
 		<div class="site-branding">
 
-			<p class="site-description"><?php the_field('tagline', 'option'); ?></p>
+			<span class="site-description"><?php the_field('tagline', 'option'); ?></span>
 
-			<p class="author-description"><?php the_field('author_details', 'option'); ?></p>
+			<span class="author-description"><?php the_field('author_details', 'option'); ?></span>
 
 			<h1 class="footer-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 

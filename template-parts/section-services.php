@@ -1,4 +1,4 @@
-<div class="section">
+<div class="services section">
 <?php 
 
 	if ( get_sub_field('subheading') ) {
@@ -12,18 +12,25 @@
 	<?php }
 
 	// check if the repeater field has rows of data
-	if( have_rows('services') ):
+	if( have_rows('services') ): ?>
 
-	 	// loop through the rows of data
-	    while ( have_rows('services') ) : the_row();
+		<ul>
 
-	        // display a sub field value
-	        the_sub_field('title');
-	        the_sub_field('description');
+		 	<?php 
+		 	// loop through the rows of data
+		    while ( have_rows('services') ) : the_row(); ?>
 
-	    endwhile;
+					<li>
+				        <i><?php the_sub_field('title'); ?></i><br><br>
+				        <?php the_sub_field('description'); ?>
+			        </li>
 
-	else :
+		    <?php
+		    endwhile; ?>
+
+	    </ul>
+
+	<?php else :
 
 	    // no rows found
 

@@ -388,6 +388,10 @@ input[type="submit"] {
   input[type="submit"]:focus {
     border-color: #aaa #bbb #bbb; }
 
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto; }
+
 .thl-form {
   text-align: center;
   background-color: #ebebec;
@@ -415,7 +419,7 @@ input[type="submit"] {
   padding-top: 60px;
   padding-bottom: 95px; }
   .list-checkbox-wrap li {
-    width: 30%;
+    width: 33.33333%;
     display: inline-block;
     text-align: left; }
 
@@ -490,10 +494,26 @@ a {
 #masthead {
   width: 100%; }
 
+#left-menu {
+  float: left;
+  width: 45%;
+  text-align: center; }
+
 #right-menu {
-  float: right; }
+  float: right;
+  width: 45%;
+  text-align: center; }
+
+#center-menu {
+  float: left;
+  width: 10%; }
 
 .main-navigation {
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 26px;
+  text-transform: uppercase;
   position: fixed;
   z-index: 99999;
   clear: both;
@@ -506,6 +526,8 @@ a {
     list-style: none;
     margin: 0;
     padding-left: 0; }
+    .main-navigation ul li {
+      padding: 1.5em 10%; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -523,8 +545,13 @@ a {
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
+    .main-navigation ul:after {
+      content: "";
+      display: table;
+      table-layout: fixed;
+      clear: both; }
   .main-navigation li {
-    float: left;
+    display: inline-block;
     position: relative; }
   .main-navigation a {
     display: block;
@@ -656,7 +683,8 @@ a {
 .site-footer:after {
   content: "";
   display: table;
-  table-layout: fixed; }
+  table-layout: fixed;
+  clear: both; }
 
 .clear:after,
 .entry-content:after,
@@ -715,9 +743,54 @@ a {
 
 #site-logo {
   margin: 0 auto; }
+  #site-logo a {
+    width: 100%;
+    height: 100%; }
 
 .section h1 {
   text-align: center; }
+
+#tagline {
+  padding: 50px 0; }
+
+#featured-posts {
+  padding: 50px 0;
+  position: relative; }
+  #featured-posts .left,
+  #featured-posts .right {
+    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    color: #7d5a46;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 4.5px; }
+  #featured-posts .left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: rotate(-90deg); }
+  #featured-posts .right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: rotate(90deg); }
+  #featured-posts article {
+    display: inline-block;
+    width: 30%; }
+    #featured-posts article header {
+      margin: 0 auto; }
+
+.home-gallery {
+  padding: 100px 0; }
+
+.about-me {
+  padding: 0 0 100px; }
+
+.wisdom-wall {
+  margin: 0 150px 150px; }
+  .wisdom-wall .wisdom-location {
+    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+  .wisdom-wall .wisdom-author {
+    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 
 .blog .content-area {
   max-width: 800px;
@@ -736,12 +809,24 @@ a {
       clear: both;
       content: ''; }
 
-.wisdom-wall {
-  margin: 0 150px 150px; }
-  .wisdom-wall .wisdom-location {
-    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
-  .wisdom-wall .wisdom-author {
-    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+.services {
+  padding: 100px 0 75px;
+  text-align: center; }
+  .services ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .services ul:after {
+      content: "";
+      display: table;
+      table-layout: fixed;
+      clear: both; }
+    .services ul li {
+      float: left;
+      width: 33.33333%;
+      padding: 30px 2%; }
+  .services i {
+    font-weight: 600; }
 
 #colophon {
   background-color: #233a4a;

@@ -36,8 +36,10 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'left-menu' ) ); ?>
 
             <?php if ( get_theme_mod( 'lion_logo' ) ) : ?>
-                <div id="site-logo">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>
+            	<div id="center-menu">
+	                <div id="site-logo">
+	                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>
+	                </div>
                 </div>
             <?php else : ?>
                 <hgroup>

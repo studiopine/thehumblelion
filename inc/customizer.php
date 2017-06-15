@@ -39,9 +39,9 @@ function lion_customize_css()
             
              #site-logo {
               background-image: url('<?php echo get_theme_mod('lion_logo'); ?>');
-              background-size: 84px 53px;
-              width: 84px;
-              height: 53px;
+              background-size: 100px 62px;
+              width: 100px;
+              height: 62px;
              }
 
          </style>

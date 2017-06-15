@@ -4,11 +4,28 @@
 	width: 100%;
 }
 
+#left-menu {
+	float: left;
+	width: 45%;
+	text-align: center;
+}
 #right-menu {
 	float: right;
+	width: 45%;
+	text-align: center;
+}
+#center-menu {
+	float: left;
+	width: 10%;
 }
 
 .main-navigation {
+	font-family: $font__sub;
+	font-size: 12px;
+	letter-spacing: 2px;
+	line-height: 26px;
+	text-transform: uppercase;
+
 	position: fixed;
 	z-index: 99999;
 	clear: both;
@@ -21,7 +38,9 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-
+		li {
+			padding: 1.5em 10%;
+		}
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
@@ -59,10 +78,14 @@
 		li.focus > ul {
 			left: auto;
 		}
+		&:after {
+			@include clearfix;
+		}
 	}
 
 	li {
-		float: left;
+		// float: left;
+		display: inline-block;
 		position: relative;
 
 		&:hover > a,

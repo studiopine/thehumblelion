@@ -42,6 +42,8 @@ function lion_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size( 'featured-post', 320, 320, true );
+
 	// This theme uses wp_nav_menu() in four locations.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Left', 'lion' ),
