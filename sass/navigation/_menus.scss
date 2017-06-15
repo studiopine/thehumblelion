@@ -9,6 +9,8 @@
 }
 
 .main-navigation {
+	position: fixed;
+	z-index: 99999;
 	clear: both;
 	display: block;
 	float: left;
@@ -82,6 +84,11 @@
 
 .footer-navigation {
 	@include two-columns;
+	font-family: $font__sub;
+	font-size: 12px;
+	letter-spacing: 2px;
+	line-height: 26px;
+	text-transform: uppercase;
 	ul {
 		margin: 0;
 		padding: 0;

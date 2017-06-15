@@ -494,6 +494,8 @@ a {
   float: right; }
 
 .main-navigation {
+  position: fixed;
+  z-index: 99999;
   clear: both;
   display: block;
   float: left;
@@ -534,7 +536,12 @@ a {
   column-count: 2;
   -webkit-column-gap: 40px;
   column-gap: 40px;
-  -moz-column-gap: 40px; }
+  -moz-column-gap: 40px;
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 26px;
+  text-transform: uppercase; }
   .footer-navigation:after {
     clear: both;
     content: ''; }
@@ -745,12 +752,13 @@ a {
   #colophon .site-info {
     font-size: 11px; }
   #colophon .footer-site-title {
-    font-weight: 500; }
+    font-weight: 500;
+    margin: 0; }
   #colophon #footer-social {
     padding: 0 0 30px; }
 
 #colophon {
-  padding: 110px 50px 50px 50px; }
+  padding: 110px 50px 40px 50px; }
   #colophon #footer-left {
     float: left;
     width: 50%;
