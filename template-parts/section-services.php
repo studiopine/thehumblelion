@@ -1,3 +1,4 @@
+<div class="section">
 <?php 
 
 	if ( get_sub_field('subheading') ) {
@@ -29,3 +30,4 @@
 	endif;
 	
 ?>
+</div>

@@ -1,3 +1,4 @@
+<div class="thl-form">
 <?php 
 
 	if ( get_sub_field('subheading') ) {
@@ -19,3 +20,4 @@
 	}
 	
 ?>
+</div>

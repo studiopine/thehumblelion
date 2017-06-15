@@ -1,6 +1,29 @@
+.section {
+	h1 {
+		text-align: center;
+	}
+}
+
 .blog {
 	.content-area {
 		max-width: $max-width;
 		margin: 0 auto;
+	}
+}
+
+.fullwidthtext {
+	padding: 150px;
+	.text {
+		@include two-columns;
+	}
+}
+
+.wisdom-wall {
+	margin: 0 $section-padding 150px;
+	.wisdom-location {
+		font-family: $font__sub;
+	}
+	.wisdom-author {
+		font-family: $font__sub;
 	}
 }

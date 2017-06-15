@@ -26,6 +26,9 @@ get_header(); ?>
 					if( get_row_layout() == 'full_width_text' )
 						get_template_part('template-parts/section', 'fullwidthtext');
 
+					if( get_row_layout() == 'wisdom_wall' )
+						get_template_part('template-parts/section', 'wisdom');
+
 					endwhile; // close the loop of flexible content
 				endif; // close flexible content conditional
 

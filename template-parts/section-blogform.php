@@ -1,3 +1,4 @@
+<div class="thl-form">
 <?php 
 
 	// are there any rows within within our flexible content?
@@ -13,9 +14,11 @@
 				the_field('subheading', 'options');
 			}
 
-			if ( get_field('heading', 'options') ) {
-				the_field('heading', 'options');
-			}
+			if ( get_field('heading', 'options') ) { ?>
+
+				<h2><?php the_field('heading', 'options'); ?></h2>
+
+			<?php }
 
 			if ( get_field('form_shortcode', 'options') ) {
 				the_field('form_shortcode', 'options' );
@@ -26,3 +29,4 @@
 	endif; // close flexible content conditional
 
 ?>
+</div>

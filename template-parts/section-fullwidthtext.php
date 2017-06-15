@@ -1,3 +1,4 @@
+<div class="fullwidthtext section">
 <?php 
 
 	if ( get_sub_field('subheading') ) {
@@ -10,8 +11,11 @@
 
 	<?php }
 
-	if ( get_sub_field('content') ) {
-		the_sub_field('content');
-	}
+	if ( get_sub_field('content') ) { ?>
+
+		<div class="text"><?php the_sub_field('content'); ?></div>
+
+	<?php }
 	
 ?>
+</div>

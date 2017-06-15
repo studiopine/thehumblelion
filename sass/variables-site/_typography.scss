@@ -1,4 +1,17 @@
-$font__main: Georgia, Times, "Times New Roman", serif;
+@font-face {
+  font-family: 'Katahdin Round Bold';
+  src: url('inc/fonts/KatahdinRound-Bold.eot'); /* IE9 Compat Modes */
+  src: url('inc/fonts/KatahdinRound-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('inc/fonts/KatahdinRound-Bold.woff') format('woff'), /* Modern Browsers */
+       url('inc/fonts/KatahdinRound-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('inc/fonts/KatahdinRound-Bold.svg#70d2bfc85c35028265fa73bb826a63f0') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+$font__main: "adobe-caslon-pro", Georgia, Times, "Times New Roman", serif;
+$font__sub: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 $font__code: Georgia, Times, "Times New Roman", serif;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
