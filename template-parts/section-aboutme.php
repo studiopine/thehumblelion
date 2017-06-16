@@ -1,28 +1,41 @@
 <div class="about-me">
-<?php 
 
-	if ( get_sub_field('subheading') ) {
-		the_sub_field('subheading');
-	}
+	<div class="left">
 
-	if ( get_sub_field('heading') ) { ?>
+		<div class="about-text">
 
-		<h1><?php the_sub_field('heading'); ?></h1>
+			<?php 
 
-	<?php }
+				if ( get_sub_field('subheading') ) { ?>
 
-	if ( get_sub_field('description') ) {
-		the_sub_field('description');
-	}
+					<i><?php the_sub_field('subheading'); ?></i>
 
-	if ( get_sub_field('read_more_button_text') ) { ?>
-		
-		<a href="<?php the_sub_field('read_more_button_link'); ?>"><?php the_sub_field('read_more_button_text'); ?></a>
+				<?php }
 
-	<?php }
-	
-?>
+				if ( get_sub_field('heading') ) { ?>
 
-<img src="<?php the_sub_field('photo'); ?>" alt="" />
+					<h3><?php the_sub_field('heading'); ?></h3>
+
+				<?php }
+
+				if ( get_sub_field('description') ) { ?>
+					
+					<span><?php the_sub_field('description'); ?></span>
+
+				<?php }
+
+				if ( get_sub_field('read_more_button_text') ) { ?>
+					
+					<a href="<?php the_sub_field('read_more_button_link'); ?>"><?php the_sub_field('read_more_button_text'); ?></a>
+
+			<?php } ?>
+
+		</div>
+
+	</div>
+
+	<div class="right" style="background: url('<?php the_sub_field('photo'); ?>'); background-size: cover; background-position: center center;">
+
+	</div>
 
 </div>

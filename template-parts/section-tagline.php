@@ -8,7 +8,11 @@
 		<?php }
 
 	?>
+	
+	<div id="thl-logomark">
 
-	<img id="thl-logomark" src="<?php the_sub_field('the_image'); ?>" alt="" />
+		<img src="<?php the_sub_field('the_image'); ?>" alt="" />
+		
+	</div>
 	
 </div>

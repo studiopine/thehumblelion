@@ -1,9 +1,11 @@
 <div class="thl-form">
 <?php 
 
-	if ( get_sub_field('subheading') ) {
-		the_sub_field('subheading');
-	}
+	if ( get_sub_field('subheading') ) { ?>
+
+		<h4><?php the_sub_field('subheading'); ?></h4>
+
+	<?php }
 
 	if ( get_sub_field('heading') ) { ?>
 

@@ -5,12 +5,32 @@
 }
 
 #tagline {
-	padding: 50px 0;
+	padding: 125px 125px 40px;
+	&:after {
+		@include clearfix;
+	}
+	h1 {
+		float: left;
+		width: 75%;
+		margin: 0;
+	}
+	#thl-logomark {
+		float: left;
+		width: 25%;
+		text-align: right;
+		img {
+			max-width: 80px;
+			margin: 0 auto;
+		}		
+	}
 }
 
 #featured-posts {
 	padding: 50px 0;
 	position: relative;
+	&:after {
+		@include clearfix;
+	}
 	.left,
 	.right {
 		font-family: $font__sub;
@@ -32,8 +52,11 @@
 		transform: rotate(90deg);
 	}
 	article {
-		display: inline-block;
-		width: 30%;
+		float: left;
+		width: 1/3 * 100%;
+		img {
+			width: 100%;
+		}
 		header {
 			margin: 0 auto;
 		}
@@ -42,10 +65,56 @@
 
 .home-gallery {
 	padding: 100px 0;
+	h1 {
+		// float: left;
+		// &:after {
+		//     content: '';
+		//     display: block;
+		//     height: 1px;
+		//     background: $black;
+		//     width: 50%;
+		//     float: right;
+		// }
+	}
 }
 
 .about-me {
-	padding: 0 0 100px;
+	// padding: 0 0 100px;
+	margin-bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 68%;
+	overflow: hidden;
+	height: 530px;
+	.left {
+		float: left;
+		background: url('inc/TheHumbleLion-Black-large.png');
+		background-size: 100% auto;
+		color: #ffffff;
+		width: 42%;
+		height: 100%;
+		text-align: center;
+		position: relative;
+		.about-text {
+			padding: 40px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			span {
+				padding-bottom: 8em;
+				display: block;
+			}
+		}
+	}
+	.right {
+		// background: url('inc/KaSandraMitchell.jpg');
+		float: right;
+		height: 100%;
+		width: 55%;
+	}
+	&:after {
+		@include clearfix;
+	}
 }
 
 .wisdom-wall {

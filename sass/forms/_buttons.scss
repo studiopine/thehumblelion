@@ -44,6 +44,7 @@ input[type="submit"] {
 		border-radius: 0;
 		background: $passportblue;
 		color: #ffffff;
+		font-family: $font__sub;
 		text-transform: uppercase;
 		font-weight: 500;
 		letter-spacing: 2.5px;
@@ -60,7 +61,7 @@ input[type="submit"] {
 	padding-bottom: 95px;
 	li {
 		width: 1/3 * 100%;
-		display: inline-block;
+		float: left;
 		text-align: left;
 	}
 }

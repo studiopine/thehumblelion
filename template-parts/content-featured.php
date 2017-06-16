@@ -11,7 +11,7 @@
 
 <div id="featured-posts">
 	
-	<div class="left">The Latest</div>
+	<h4 class="left">The Latest</h4>
 
 	<?php
 	$args = array(
@@ -36,7 +36,7 @@
 							<?php lion_posted_on(); ?>
 						</div><!-- .entry-meta -->
 
-						<?php the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );?>
+						<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );?>
 
 					</header><!-- .entry-header -->
 
@@ -52,6 +52,6 @@
 	wp_reset_query();
 	?>
 
-	<div class="right">Favorites</div>
+	<h4 class="right">Favorites</h4>
 
 </div><!-- #featured-posts -->

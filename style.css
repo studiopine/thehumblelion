@@ -257,6 +257,14 @@ h2 {
   font-weight: 400;
   color: #231f20; }
 
+h4 {
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #7d5a46; }
+
 p {
   margin-bottom: 1.5em;
   -webkit-margin-before: 0; }
@@ -406,6 +414,7 @@ input[type="submit"] {
     border-radius: 0;
     background: #121a25;
     color: #ffffff;
+    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 2.5px;
@@ -420,7 +429,7 @@ input[type="submit"] {
   padding-bottom: 95px; }
   .list-checkbox-wrap li {
     width: 33.33333%;
-    display: inline-block;
+    float: left;
     text-align: left; }
 
 input[type="text"],
@@ -751,11 +760,32 @@ a {
   text-align: center; }
 
 #tagline {
-  padding: 50px 0; }
+  padding: 125px 125px 40px; }
+  #tagline:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both; }
+  #tagline h1 {
+    float: left;
+    width: 75%;
+    margin: 0; }
+  #tagline #thl-logomark {
+    float: left;
+    width: 25%;
+    text-align: right; }
+    #tagline #thl-logomark img {
+      max-width: 80px;
+      margin: 0 auto; }
 
 #featured-posts {
   padding: 50px 0;
   position: relative; }
+  #featured-posts:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both; }
   #featured-posts .left,
   #featured-posts .right {
     font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
@@ -774,8 +804,10 @@ a {
     right: 0;
     transform: rotate(90deg); }
   #featured-posts article {
-    display: inline-block;
-    width: 30%; }
+    float: left;
+    width: 33.33333%; }
+    #featured-posts article img {
+      width: 100%; }
     #featured-posts article header {
       margin: 0 auto; }
 
@@ -783,7 +815,38 @@ a {
   padding: 100px 0; }
 
 .about-me {
-  padding: 0 0 100px; }
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 68%;
+  overflow: hidden;
+  height: 530px; }
+  .about-me .left {
+    float: left;
+    background: url("inc/TheHumbleLion-Black-large.png");
+    background-size: 100% auto;
+    color: #ffffff;
+    width: 42%;
+    height: 100%;
+    text-align: center;
+    position: relative; }
+    .about-me .left .about-text {
+      padding: 40px;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+      .about-me .left .about-text span {
+        padding-bottom: 8em;
+        display: block; }
+  .about-me .right {
+    float: right;
+    height: 100%;
+    width: 55%; }
+  .about-me:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both; }
 
 .wisdom-wall {
   margin: 0 150px 150px; }
