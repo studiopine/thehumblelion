@@ -111,6 +111,7 @@ add_action( 'widgets_init', 'lion_widgets_init' );
 function exclude_category( $query ) {
     if ( $query->is_home() && $query->is_main_query() ) {
         $query->set( 'cat', '-51' );
+        // $query->set( 'cat', '-70' );
     }
 }
 add_action( 'pre_get_posts', 'exclude_category' );

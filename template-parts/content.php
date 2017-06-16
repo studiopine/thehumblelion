@@ -36,9 +36,12 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
+
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lion' ),
-				'after'  => '</div>',
+				'before' 			=> '<div class="page-links">' . esc_html__( 'Pages:', 'lion' ),
+				'after'  			=> '</div>',
+				'nextpagelink'     => __( 'Next' ),
+				'previouspagelink' => __( 'Previous' ),
 			) );
 		?>
 	</div><!-- .entry-content -->

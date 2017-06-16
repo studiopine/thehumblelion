@@ -269,6 +269,15 @@ p {
   margin-bottom: 1.5em;
   -webkit-margin-before: 0; }
 
+.feautred-entry-meta {
+  color: #dcddde; }
+
+h3.entry-title {
+  -webkit-margin-before: 0;
+  margin: 0.5em 0 0; }
+  h3.entry-title a {
+    color: #231f20; }
+
 dfn, cite, em, i {
   font-style: italic; }
 
@@ -426,7 +435,9 @@ input[type="submit"] {
 
 .list-checkbox-wrap {
   padding-top: 60px;
-  padding-bottom: 95px; }
+  padding-bottom: 95px;
+  width: 84%;
+  margin: 0 auto; }
   .list-checkbox-wrap li {
     width: 33.33333%;
     float: left;
@@ -484,7 +495,8 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #7d5a46; }
+  color: #7d5a46;
+  text-decoration: none; }
   a:visited {
     color: #7d5a46; }
   a:hover, a:focus, a:active {
@@ -516,6 +528,26 @@ a {
 #center-menu {
   float: left;
   width: 10%; }
+
+#blog-menu {
+  position: fixed;
+  margin-top: 62px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #121a25;
+  background-color: #ffffff;
+  z-index: 99998; }
+  #blog-menu ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    #blog-menu ul li {
+      padding: 1.5em 2.5em 1em;
+      display: inline-block;
+      position: relative;
+      font-style: italic; }
+      #blog-menu ul li a {
+        color: #121a25; }
 
 .main-navigation {
   font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
@@ -756,6 +788,38 @@ a {
     width: 100%;
     height: 100%; }
 
+.blog .content-area,
+.single-post .content-area {
+  max-width: 800px;
+  margin: 0 auto; }
+.blog #content,
+.single-post #content {
+  padding: 250px 0 0; }
+
+.blog article {
+  padding-bottom: 150px; }
+.blog a.more-link {
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 12px;
+  background: #7d5a46;
+  color: #ffffff;
+  padding: 15px 150px;
+  display: block;
+  text-align: center;
+  margin: 2em auto;
+  max-width: 625px; }
+
+.posts-navigation {
+  padding-bottom: 150px;
+  text-align: center;
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+  .posts-navigation a {
+    color: #231f20; }
+
 .section h1 {
   text-align: center; }
 
@@ -779,8 +843,9 @@ a {
       margin: 0 auto; }
 
 #featured-posts {
-  padding: 50px 0;
-  position: relative; }
+  position: relative;
+  width: 86%;
+  margin: 50px auto; }
   #featured-posts:after {
     content: "";
     display: table;
@@ -795,19 +860,21 @@ a {
     letter-spacing: 4.5px; }
   #featured-posts .left {
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: 30%;
+    left: -95px;
     transform: rotate(-90deg); }
   #featured-posts .right {
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: 30%;
+    right: -95px;
     transform: rotate(90deg); }
   #featured-posts article {
     float: left;
-    width: 33.33333%; }
+    width: 33.33333%;
+    padding: 0 30px; }
     #featured-posts article img {
-      width: 100%; }
+      width: 100%;
+      padding-bottom: 1em; }
     #featured-posts article header {
       margin: 0 auto; }
 
@@ -855,9 +922,8 @@ a {
   .wisdom-wall .wisdom-author {
     font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 
-.blog .content-area {
-  max-width: 800px;
-  margin: 0 auto; }
+.gallery-wall {
+  padding-bottom: 150px; }
 
 .fullwidthtext {
   padding: 150px; }

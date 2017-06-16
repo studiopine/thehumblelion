@@ -7,7 +7,7 @@
 
 	<?php }
 
-	if ( get_sub_field('gallery_shortcode') ) {
+	if ( get_sub_field('gallery_shortcode') ) { 
 
 		the_sub_field('gallery_shortcode');
 		

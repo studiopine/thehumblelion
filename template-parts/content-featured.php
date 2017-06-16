@@ -30,10 +30,10 @@
 					
 					<header class="featured-entry-header">
 						
-						<?php the_post_thumbnail( 'featured-post' ); ?>
+						<a href="<?php echo get_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'featured-post' ); ?></a>
 
 						<div class="feautred-entry-meta">
-							<?php lion_posted_on(); ?>
+							<i><?php lion_posted_on(); ?></i>
 						</div><!-- .entry-meta -->
 
 						<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );?>

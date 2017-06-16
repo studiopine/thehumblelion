@@ -3,6 +3,18 @@ p {
 	-webkit-margin-before: 0;
 }
 
+.feautred-entry-meta {
+	color: $grey;
+}
+
+h3.entry-title {
+	-webkit-margin-before: 0;
+	margin: 0.5em 0 0;
+	a {
+		color: $black;
+	}
+}
+
 dfn, cite, em, i {
 	font-style: italic;
 }

@@ -1,3 +1,43 @@
+.blog,
+.single-post {
+	.content-area {
+		max-width: $max-width;
+		margin: 0 auto;
+	}
+	#content {
+		padding: 250px 0 0;
+	}
+}
+
+.blog {
+	article {
+		padding-bottom: 150px;
+	}
+	a.more-link {
+		font-family: $font__sub;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		font-size: 12px;
+	    background: $leather;
+	    color: #ffffff;
+	    padding: 15px 150px;
+	    display: block;
+	    text-align: center;
+	    margin: 2em auto;
+	    max-width: 625px;
+	}
+}
+.posts-navigation {
+	padding-bottom: 150px;
+	text-align: center;
+	font-family: $font__sub;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	a {
+		color: $black;
+	}
+}
+
 .section {
 	h1 {
 		text-align: center;
@@ -26,8 +66,10 @@
 }
 
 #featured-posts {
-	padding: 50px 0;
+	// padding: 50px 0;
 	position: relative;
+	width: 86%;
+	margin: 50px auto;
 	&:after {
 		@include clearfix;
 	}
@@ -41,21 +83,23 @@
 	}
 	.left {
 		position: absolute;
-		top: 50%;
-		left: 0;
+		top: 30%;
+		left: -95px;
 		transform: rotate(-90deg);
 	}
 	.right {
 		position: absolute;
-		top: 50%;
-		right: 0;
+		top: 30%;
+		right: -95px;
 		transform: rotate(90deg);
 	}
 	article {
 		float: left;
 		width: 1/3 * 100%;
+		padding: 0 30px;
 		img {
 			width: 100%;
+			padding-bottom: 1em;
 		}
 		header {
 			margin: 0 auto;
@@ -127,11 +171,8 @@
 	}
 }
 
-.blog {
-	.content-area {
-		max-width: $max-width;
-		margin: 0 auto;
-	}
+.gallery-wall {
+	padding-bottom: 150px;
 }
 
 .fullwidthtext {

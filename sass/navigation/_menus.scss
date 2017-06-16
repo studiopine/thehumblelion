@@ -19,6 +19,30 @@
 	width: 10%;
 }
 
+#blog-menu {
+	position: fixed;
+	margin-top: 62px;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid $passportblue;
+	background-color: #ffffff;
+	z-index: 99998;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		li {
+			padding: 1.5em 2.5em 1em;
+			display: inline-block;
+			position: relative;
+			font-style: italic;
+			a {
+				color: $passportblue;
+			}
+		}
+	}
+}
+
 .main-navigation {
 	font-family: $font__sub;
 	font-size: 12px;
