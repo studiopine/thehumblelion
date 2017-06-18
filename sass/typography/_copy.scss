@@ -3,8 +3,24 @@ p {
 	-webkit-margin-before: 0;
 }
 
-.feautred-entry-meta {
+.entry-title {
+	a,
+	a:visited {
+		color: $black;
+	}
+}
+
+.feautred-entry-meta,
+.entry-meta,
+.entry-footer {
 	color: $grey;
+	a,
+	a:visited {
+		color: $grey;
+	}
+}
+.entry-footer {
+	text-align: center;
 }
 
 h3.entry-title {

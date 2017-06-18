@@ -269,8 +269,24 @@ p {
   margin-bottom: 1.5em;
   -webkit-margin-before: 0; }
 
-.feautred-entry-meta {
+.entry-title a,
+.entry-title a:visited {
+  color: #231f20; }
+
+.feautred-entry-meta,
+.entry-meta,
+.entry-footer {
   color: #dcddde; }
+  .feautred-entry-meta a,
+  .feautred-entry-meta a:visited,
+  .entry-meta a,
+  .entry-meta a:visited,
+  .entry-footer a,
+  .entry-footer a:visited {
+    color: #dcddde; }
+
+.entry-footer {
+  text-align: center; }
 
 h3.entry-title {
   -webkit-margin-before: 0;
@@ -808,8 +824,21 @@ a {
   padding: 15px 150px;
   display: block;
   text-align: center;
-  margin: 2em auto;
-  max-width: 625px; }
+  margin: 5em auto; }
+
+.entry-header img {
+  margin-bottom: 2em; }
+.entry-header h1 {
+  margin-bottom: 0; }
+
+.entry-meta {
+  margin-bottom: 2em; }
+
+.entry-content {
+  padding: 0 4em; }
+
+.entry-footer span {
+  padding: 0 0.5em; }
 
 .posts-navigation {
   padding-bottom: 150px;

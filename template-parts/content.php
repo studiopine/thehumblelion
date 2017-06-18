@@ -10,22 +10,39 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<header class="entry-header">
+
 		<?php
 		if ( has_post_thumbnail() ) {
-			the_post_thumbnail( array(800) ); };
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-		endif;
+			the_post_thumbnail( array(800) ); }; ?>
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php lion_posted_on(); ?> • <?php the_category(', ') ?>
-		</div><!-- .entry-meta -->
+		<div class="entry-content">
+
+			<?php
+			if ( is_single() ) :
+
+				the_title( '<h1 class="entry-title">', '</h1>' );
+
+			else :
+
+				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+
+			endif;
+
+			if ( 'post' === get_post_type() ) : ?>
+
+			<div class="entry-meta">
+
+				<i><?php lion_posted_on(); ?> • <?php the_category(', ') ?></i>
+
+			</div><!-- .entry-meta -->
+
+		</div>
+
 		<?php
 		endif; ?>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -47,7 +64,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php lion_entry_footer(); ?>
+		<i><?php lion_entry_footer(); ?></i>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
