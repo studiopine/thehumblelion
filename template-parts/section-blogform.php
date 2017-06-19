@@ -1,4 +1,4 @@
-<div class="thl-form">
+<div class="form-wrapper">
 <?php 
 
 	// are there any rows within within our flexible content?

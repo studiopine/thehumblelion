@@ -38,13 +38,22 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+			endwhile; ?>
 
-			the_posts_navigation( array(
-				'prev_text' 			=> esc_html__( 'Previous', 'lion' ),
-				'next_text'  			=> esc_html__( 'Next', 'lion' ),
-			));
+			<div class="post-navigation">
 
+				<?php if( get_previous_posts_link() ) : ?>
+
+					<span class="nav-previous"><?php previous_posts_link( 'Previous' ); ?></span>
+
+				<?php 
+				endif; ?>
+
+				<span class="nav-next"><?php next_posts_link( 'Next' ); ?></span>
+
+			</div>
+
+		<?php 
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );

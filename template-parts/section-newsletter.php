@@ -1,4 +1,4 @@
-<div class="thl-form">
+<div class="form-wrapper">
 <?php 
 
 	if ( get_field('subheading', 'options') ) { ?>

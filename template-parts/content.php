@@ -55,8 +55,8 @@
 
 
 			wp_link_pages( array(
-				'before' 			=> '<div class="page-links">' . esc_html__( 'Pages:', 'lion' ),
-				'after'  			=> '</div>',
+				// 'before' 			=> '<div class="page-links">' . esc_html__( 'Pages:', 'lion' ),
+				// 'after'  			=> '</div>',
 				'nextpagelink'     => __( 'Next' ),
 				'previouspagelink' => __( 'Previous' ),
 			) );

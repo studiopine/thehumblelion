@@ -4,7 +4,7 @@ YARPP Template: Thumbnails
 Description: Requires a theme which supports post thumbnails
 Author: mitcho (Michael Yoshitaka Erlewine)
 */ ?>
-<h3>If you liked this one, you will love these</h3>
+<h4>If you liked this one, you will love these</h4>
 <?php if (have_posts()):?>
 <ul>
 	<?php while (have_posts()) : the_post(); ?>

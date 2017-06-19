@@ -18,8 +18,7 @@
 }
 
 
-.blog,
-.single-post {
+.blog {
 	.content-area {
 		max-width: $max-width;
 		margin: 0 auto;
@@ -27,9 +26,6 @@
 	#content {
 		padding: 150px 0 0;
 	}
-}
-
-.blog {
 	article {
 		padding-bottom: 150px;
 	}
@@ -46,6 +42,24 @@
 	    margin: 5em auto;
 	}
 }
+
+.single-post {
+	#content {
+		padding: 150px 0 0;
+	}
+	article,
+	#comments {
+		max-width: $max-width;
+		margin: 0 auto 100px;
+	}
+}
+
+.yarpp-related {
+	background-color: $lightgrey;
+	padding: 100px 0;
+	margin-bottom: 100px !important;
+}
+
 .entry-header {
 	img {
 		margin-bottom: 2em;
@@ -215,6 +229,9 @@
 		letter-spacing: 1px;
 		text-transform: uppercase;
 	}
+	.tg-filter-name {
+		padding: 0 50px;
+	}
 }
 
 .fullwidthtext {
@@ -225,7 +242,8 @@
 }
 
 .services {
-	padding: 100px 0 75px;
+	margin: 100px $section-padding;
+	// padding: 100px 0 75px;
 	text-align: center;
 	ul {
 		list-style: none;

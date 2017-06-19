@@ -1,66 +1,66 @@
 button,
 input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
-	line-height: 1;
-	padding: .6em 1em .4em;
-
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
-
+input[type="submit"],
+input[type="reset"] {
+	border: none;
+	border-radius: 0;
+	background: $passportblue;
+	color: #ffffff;
+	font-family: $font__sub;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 2.5px;
+	font-size: 14px;
+	padding: 15px 90px;
+	width: 100%;
+	&:hover,
 	&:active,
 	&:focus {
-		border-color: $color__border-button-focus;
+		opacity: 0.6;
 	}
 }
-// input[type="checkbox"] {
-// 	visibility: hidden;
-// }
 
-.contact-form {
-	max-width: 600px;
-	margin: 0 auto;
-}
-
-.thl-form {
+.form-wrapper {
 	text-align: center;
 	background-color: $lightgrey;
-	padding: 100px 0;
 	margin-bottom: 100px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 	h2 {
 		font-style: italic;
 	}
+}
+.blog .form-wrapper {
+	margin-bottom: 0;
+}
+.thl-form {
+	padding: 100px $form-padding;
+}
+.newsletter-form {
+	padding: 0 $section-padding;
+}
+.contact-form {
+	max-width: 650px;
+	padding-left: 2em;
+	padding-right: 2em;
+	margin: 0 auto;
 	button,
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"] {
-		border: none;
-		border-radius: 0;
-		background: $passportblue;
-		color: #ffffff;
-		font-family: $font__sub;
-		text-transform: uppercase;
-		font-weight: 500;
-		letter-spacing: 2.5px;
-		font-size: 14px;
-		padding: 20px 90px;
+		background: $leather;
+		width: 100% !important;
 	}
+	// .field-wrap input[type="submit"], 
+	// .field-wrap input[type="button"], 
+	// .field-wrap button {
+	// 	width: 100% !important;
+	// }
 }
 
-.nf-field-container {
-	margin-bottom: 0!important;
-}
 .list-checkbox-wrap {
 	padding-top: 60px;
 	padding-bottom: 95px;
-	width: 84%;
 	margin: 0 auto;
 	li {
 		width: 1/3 * 100%;
@@ -68,3 +68,20 @@ input[type="submit"] {
 		text-align: left;
 	}
 }
+
+// button,
+// input[type="button"],
+// input[type="reset"],
+// input[type="submit"] {
+// 	border: 1px solid;
+// 	border-color: $color__border-button;
+// 	border-radius: 3px;
+// 	background: $color__background-button;
+// 	color: rgba(0, 0, 0, .8);
+// 	@include font-size(0.75);
+// 	line-height: 1;
+// 	padding: .6em 1em .4em;
+// }
+// input[type="checkbox"] {
+// 	visibility: hidden;
+// }
