@@ -1,3 +1,23 @@
+#main {
+	padding-top: 150px;
+}
+
+.section {
+	margin-bottom: 100px;
+	h1 {
+		text-align: center;
+	}
+}
+
+.home .thl-hero-img {
+	margin-top: -150px;
+}
+
+.thl-hero-img {
+	margin-top: -100px;
+}
+
+
 .blog,
 .single-post {
 	.content-area {
@@ -5,7 +25,7 @@
 		margin: 0 auto;
 	}
 	#content {
-		padding: 250px 0 0;
+		padding: 150px 0 0;
 	}
 }
 
@@ -53,12 +73,6 @@
 	letter-spacing: 2px;
 	a {
 		color: $black;
-	}
-}
-
-.section {
-	h1 {
-		text-align: center;
 	}
 }
 
@@ -125,24 +139,8 @@
 	}
 }
 
-.home-gallery {
-	padding: 100px 0;
-	h1 {
-		// float: left;
-		// &:after {
-		//     content: '';
-		//     display: block;
-		//     height: 1px;
-		//     background: $black;
-		//     width: 50%;
-		//     float: right;
-		// }
-	}
-}
-
 .about-me {
 	// padding: 0 0 100px;
-	margin-bottom: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 68%;
@@ -157,6 +155,24 @@
 		height: 100%;
 		text-align: center;
 		position: relative;
+		color: $grey;
+		a,
+		a:visited {
+			font-family: $font__sub;
+			font-size: 12px;
+			line-height: 22px;
+			letter-spacing: 2.5px;
+			text-transform: uppercase;
+			color: $grey;
+			&:before {
+				content: '';
+				display: block;
+				height: 1px;
+				width: 45px;
+				margin: 0 auto 25px;
+				background-color: $grey;
+			}
+		}
 		.about-text {
 			padding: 40px;
 			position: absolute;
@@ -180,7 +196,7 @@
 }
 
 .wisdom-wall {
-	margin: 0 $section-padding 150px;
+	margin: 0 $section-padding 100px;
 	.wisdom-location {
 		font-family: $font__sub;
 	}
@@ -190,11 +206,19 @@
 }
 
 .gallery-wall {
-	padding-bottom: 150px;
+	margin: 0 $section-padding 100px;
+	.tg-nav-font,
+	.tg-item-term {
+		font-family: $font__sub;
+		font-size: 12px !important;
+		line-height: 28px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
 }
 
 .fullwidthtext {
-	padding: 150px;
+	padding: 0 150px;
 	.text {
 		@include two-columns;
 	}

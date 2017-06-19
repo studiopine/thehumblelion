@@ -257,6 +257,14 @@ h2 {
   font-weight: 400;
   color: #231f20; }
 
+h3 {
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #dcddde; }
+
 h4 {
   font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-size: 12px;
@@ -428,7 +436,8 @@ input[type="submit"] {
 .thl-form {
   text-align: center;
   background-color: #ebebec;
-  padding: 70px 0; }
+  padding: 100px 0;
+  margin-bottom: 100px; }
   .thl-form h2 {
     font-style: italic; }
   .thl-form button,
@@ -804,13 +813,27 @@ a {
     width: 100%;
     height: 100%; }
 
+#main {
+  padding-top: 150px; }
+
+.section {
+  margin-bottom: 100px; }
+  .section h1 {
+    text-align: center; }
+
+.home .thl-hero-img {
+  margin-top: -150px; }
+
+.thl-hero-img {
+  margin-top: -100px; }
+
 .blog .content-area,
 .single-post .content-area {
   max-width: 800px;
   margin: 0 auto; }
 .blog #content,
 .single-post #content {
-  padding: 250px 0 0; }
+  padding: 150px 0 0; }
 
 .blog article {
   padding-bottom: 150px; }
@@ -848,9 +871,6 @@ a {
   letter-spacing: 2px; }
   .posts-navigation a {
     color: #231f20; }
-
-.section h1 {
-  text-align: center; }
 
 #tagline {
   padding: 125px 125px 40px; }
@@ -907,11 +927,7 @@ a {
     #featured-posts article header {
       margin: 0 auto; }
 
-.home-gallery {
-  padding: 100px 0; }
-
 .about-me {
-  margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
   width: 68%;
@@ -925,7 +941,24 @@ a {
     width: 42%;
     height: 100%;
     text-align: center;
-    position: relative; }
+    position: relative;
+    color: #dcddde; }
+    .about-me .left a,
+    .about-me .left a:visited {
+      font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+      font-size: 12px;
+      line-height: 22px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #dcddde; }
+      .about-me .left a:before,
+      .about-me .left a:visited:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 45px;
+        margin: 0 auto 25px;
+        background-color: #dcddde; }
     .about-me .left .about-text {
       padding: 40px;
       position: absolute;
@@ -945,17 +978,24 @@ a {
     clear: both; }
 
 .wisdom-wall {
-  margin: 0 150px 150px; }
+  margin: 0 150px 100px; }
   .wisdom-wall .wisdom-location {
     font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
   .wisdom-wall .wisdom-author {
     font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 
 .gallery-wall {
-  padding-bottom: 150px; }
+  margin: 0 150px 100px; }
+  .gallery-wall .tg-nav-font,
+  .gallery-wall .tg-item-term {
+    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 12px !important;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
 
 .fullwidthtext {
-  padding: 150px; }
+  padding: 0 150px; }
   .fullwidthtext .text {
     -webkit-column-count: 2;
     -moz-column-count: 2;

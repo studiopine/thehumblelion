@@ -17,9 +17,11 @@
 		the_sub_field('form_shortcode');
 	}
 
-	if ( get_sub_field('notes') ) {
-		the_sub_field('notes');
-	}
+	if ( get_sub_field('notes') ) { ?>
+
+		<i><?php the_sub_field('notes'); ?></i>
+	
+	<?php }
 	
 ?>
 </div>

@@ -10,8 +10,6 @@
 ?>
 
 <div id="featured-posts">
-	
-	<h4 class="left">The Latest</h4>
 
 	<?php
 	$args = array(
@@ -20,8 +18,13 @@
 
 	$query = new WP_Query($args);
 
-	if ( $query->have_posts() ) { 
+	if ( $query->have_posts() ) { ?>
+
+		<h4 class="left">The Latest</h4>
+
+	    <?php 
 	    while($query->have_posts()) { 
+
 	        $query->the_post(); 
 
 	        if ( has_post_thumbnail() ) { // only print out the thumbnail if it actually has one ?>
@@ -45,13 +48,15 @@
 	        <?php } else {
 	            // Display nothing
 	        }
-	    }
+	    } ?>
+
+	<h4 class="right">Favorites</h4>
+
+	<?php
 	} else {
 		// Display nothing
 	}
 	wp_reset_query();
 	?>
-
-	<h4 class="right">Favorites</h4>
 
 </div><!-- #featured-posts -->

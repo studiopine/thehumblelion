@@ -8,13 +8,11 @@
 		while ( have_rows('blog_page', '3450') ) : the_row();
 
 		// NEWSLETTER FORM
-		if( get_row_layout() == 'newsletter' )
-
-			if ( get_field('subheading', 'options') ) { ?>
+		if( get_row_layout() == 'newsletter' ) ?>
 
 				<h4><?php the_field('subheading', 'options'); ?></h4>
 
-			<?php }
+			<?php
 
 			if ( get_field('heading', 'options') ) { ?>
 
