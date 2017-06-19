@@ -35,10 +35,12 @@ if ( post_password_required() ) {
 			?>
 			<?php
 				printf( // WPCS: XSS OK.				
-					'<span>' . 'Join the conversation' . '</span>'
+					'<span>' . 'Join the ' . '<i>' . 'conversation' . '</i>' . '</span>'
 				);
 			?>
 		</h2><!-- .comments-title -->
+
+		<?php comment_form(); ?>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
@@ -53,12 +55,9 @@ if ( post_password_required() ) {
 		<?php endif; // Check for comment navigation. ?>
 
 		<ul class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ul',
-					'short_ping' => true,
-				) );
-			?>
+
+		<?php wp_list_comments( 'type=comment&callback=lion_comment' ); ?>
+
 		</ul><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
@@ -82,9 +81,6 @@ if ( post_password_required() ) {
 
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'lion' ); ?></p>
 	<?php
-	endif;
-
-	comment_form();
-	?>
+	endif; ?>
 
 </div><!-- #comments -->

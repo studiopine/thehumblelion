@@ -530,6 +530,60 @@ select {
 textarea {
   width: 100%; }
 
+.comments-title {
+  text-align: center; }
+
+#reply-title {
+  display: none; }
+
+#respond {
+  margin: 100px 0; }
+
+#comments button,
+#comments input[type="button"],
+#comments input[type="submit"],
+#comments input[type="reset"] {
+  background-color: #7d5a46; }
+#comments input[type="text"],
+#comments input[type="email"],
+#comments input[type="url"],
+#comments textarea,
+#comments input {
+  background-color: #ffffff; }
+
+ul.comment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  ul.comment-list .comment-body {
+    padding-bottom: 50px; }
+    ul.comment-list .comment-body p {
+      font-size: 18px;
+      line-height: 30px; }
+  ul.comment-list ul.children {
+    margin: 0;
+    list-style: none; }
+  ul.comment-list .comment-details {
+    margin-bottom: 1.5em; }
+  ul.comment-list .date-stamp {
+    display: inline;
+    color: #dcddde; }
+  ul.comment-list cite,
+  ul.comment-list .reply a {
+    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+  ul.comment-list cite,
+  ul.comment-list cite a,
+  ul.comment-list cite a:visited {
+    color: #231f20; }
+  ul.comment-list .reply a,
+  ul.comment-list .reply a:visited {
+    color: #dcddde; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/

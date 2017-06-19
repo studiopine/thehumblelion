@@ -1,0 +1,69 @@
+.comments-title {
+	text-align: center;
+}
+
+#reply-title {
+	display: none;
+}
+
+#respond {
+	margin: 100px 0;
+}
+
+#comments {
+	button, 
+	input[type="button"], 
+	input[type="submit"], 
+	input[type="reset"] {
+		background-color: $leather;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	textarea,
+	input {
+		background-color: #ffffff;
+	}
+}
+
+ul.comment-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	.comment-body {
+		padding-bottom: 50px;
+		p {
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+	ul.children {
+		margin: 0;
+		list-style: none;
+	}
+	.comment-details {
+		margin-bottom: 1.5em;
+	}
+	.date-stamp {
+		display: inline;
+		color: $grey;
+	}
+	cite,
+	.reply a {
+	font-family: $font__sub;
+	font-style: normal;
+	font-size: 12px;
+	line-height: 22px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	}
+	cite,
+	cite a,
+	cite a:visited {
+		color: $black;
+	}
+	.reply a,
+	.reply a:visited {
+		color: $grey;
+	}
+}

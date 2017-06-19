@@ -141,6 +141,57 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
+// Custom Comments
+function lion_comment($comment, $args, $depth) {
+ 
+    if ( 'div' === $args['style'] ) {
+        $tag       = 'div';
+        $add_below = 'comment';
+    } else {
+        $tag       = 'li';
+        $add_below = 'div-comment';
+    }
+    ?>
+
+    <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
+
+    <?php if ( 'div' != $args['style'] ) : ?>
+
+    <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+
+	    <?php endif; ?>
+
+	    <div class="comment-details">
+	       
+	        <?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link() ); ?><em class="date-stamp"><?php
+	        /* translators: 1: date, 2: time */
+	        printf( __('&nbsp;&nbsp;&mdash;&nbsp;&nbsp;%1$s ago', '%2$s = human-readable time difference', 'wpdocs_textdomain' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+	        ?></em>
+	    
+	    </div>
+
+	    <?php if ( $comment->comment_approved == '0' ) : ?>
+
+	         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
+	         <br />
+
+	    <?php endif; ?>
+
+	    <?php comment_text(); ?>
+
+	    <div class="reply">
+	        <?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+	    </div>
+
+	    <?php if ( 'div' != $args['style'] ) : ?>
+
+    </div>
+
+    <?php endif; ?>
+
+    <?php
+    }
+
 /**
  * Enqueue scripts and styles.
  */
