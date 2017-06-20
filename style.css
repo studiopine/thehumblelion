@@ -424,7 +424,8 @@ input[type="reset"] {
   letter-spacing: 2.5px;
   font-size: 14px;
   padding: 15px 90px;
-  width: 100%; }
+  width: 100%;
+  max-width: 100%; }
   button:hover, button:active, button:focus,
   input[type="button"]:hover,
   input[type="button"]:active,
