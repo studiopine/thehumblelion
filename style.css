@@ -1102,15 +1102,38 @@ a {
   .wisdom-wall .wisdom-author {
     font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 
-.gallery-wall {
-  margin: 0 150px 100px; }
-  .gallery-wall h1 {
+.home-gallery .gallery-heading,
+.gallery .gallery-heading,
+.gallery-wall .gallery-heading {
+  max-width: 1000px;
+  margin: 0 auto 50px; }
+  .home-gallery .gallery-heading h1:after,
+  .gallery .gallery-heading h1:after,
+  .gallery-wall .gallery-heading h1:after {
     content: '';
     display: inline-block;
     height: 1px;
-    width: 13em;
+    width: 62%;
     background: black;
-    margin-left: 1em; }
+    margin-left: 1em;
+    margin-bottom: 0.2em; }
+  .home-gallery .gallery-heading h1,
+  .home-gallery .gallery-heading h4,
+  .gallery .gallery-heading h1,
+  .gallery .gallery-heading h4,
+  .gallery-wall .gallery-heading h1,
+  .gallery-wall .gallery-heading h4 {
+    margin: 0; }
+  .home-gallery .gallery-heading:after,
+  .gallery .gallery-heading:after,
+  .gallery-wall .gallery-heading:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both; }
+
+.gallery-wall {
+  margin: 0 150px 100px; }
   .gallery-wall .tg-nav-font,
   .gallery-wall .tg-item-term {
     font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
@@ -1124,15 +1147,10 @@ a {
 .home .gallery-wall {
   margin: 0 0 100px; }
 
-.home-gallery h1:after,
-.gallery h1:after {
-  content: '';
-  display: inline-block;
-  height: 1px;
-  width: 45%;
-  background: black;
-  margin-left: 1em;
-  margin-bottom: 0.2em; }
+.gallery {
+  margin-bottom: 100px !important; }
+  .gallery h4 {
+    color: #121a25; }
 
 .fullwidthtext {
   padding: 0 150px; }
