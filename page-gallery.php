@@ -23,8 +23,8 @@ get_header(); ?>
 					while ( have_rows('gallery_page_content') ) : the_row();
 
 					// FULL WIDTH
-					if( get_row_layout() == 'full_width' )
-						get_template_part('template-parts/section', 'fullwidth');
+					if( get_row_layout() == 'gallery' )
+						get_template_part('template-parts/section', 'gallery');
 
 					endwhile; // close the loop of flexible content
 				endif; // close flexible content conditional

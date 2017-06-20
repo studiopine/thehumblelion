@@ -3,7 +3,7 @@
 
 	if ( get_sub_field('heading') ) { ?>
 
-		<h1><?php the_sub_field('heading'); ?></h1><?php if ( is_front_page() ) : ?><hr><?php else : ?><?php endif; ?>
+		<h1><?php the_sub_field('heading'); ?></h1>
 
 	<?php }
 

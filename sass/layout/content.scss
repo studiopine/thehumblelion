@@ -248,6 +248,14 @@
 
 .gallery-wall {
 	margin: 0 $section-padding 100px;
+	h1 {
+	    content: '';
+	    display: inline-block;
+	    height: 1px;
+	    width: 13em;
+	    background: black;
+	    margin-left: 1em;
+	}
 	.tg-nav-font,
 	.tg-item-term {
 		font-family: $font__sub;
@@ -258,6 +266,21 @@
 	}
 	.tg-filter-name {
 		padding: 0 50px;
+	}
+}
+.home .gallery-wall {
+	margin: 0 0 100px;
+}
+.home-gallery,
+.gallery {
+	h1:after {
+	    content: '';
+	    display: inline-block;
+	    height: 1px;
+	    width: 45%;
+	    background: black;
+	    margin-left: 1em;
+	    margin-bottom: 0.2em;
 	}
 }
 

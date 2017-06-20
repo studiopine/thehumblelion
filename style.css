@@ -1103,6 +1103,13 @@ a {
 
 .gallery-wall {
   margin: 0 150px 100px; }
+  .gallery-wall h1 {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 13em;
+    background: black;
+    margin-left: 1em; }
   .gallery-wall .tg-nav-font,
   .gallery-wall .tg-item-term {
     font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
@@ -1112,6 +1119,19 @@ a {
     text-transform: uppercase; }
   .gallery-wall .tg-filter-name {
     padding: 0 50px; }
+
+.home .gallery-wall {
+  margin: 0 0 100px; }
+
+.home-gallery h1:after,
+.gallery h1:after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 45%;
+  background: black;
+  margin-left: 1em;
+  margin-bottom: 0.2em; }
 
 .fullwidthtext {
   padding: 0 150px; }
