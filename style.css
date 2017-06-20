@@ -502,7 +502,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
   background-color: #ebebec;
-  color: #dcddde !important;
+  color: #231f20 !important;
   border: 1px solid #231f20;
   border-radius: 0;
   padding: 20px 20px 10px; }
@@ -530,15 +530,20 @@ select {
 textarea {
   width: 100%; }
 
-.comments-title {
-  text-align: center; }
+h2.comments-title {
+  text-align: center;
+  margin-bottom: 0; }
 
 #reply-title {
   display: none; }
 
 #respond {
-  margin: 100px 0; }
+  margin: 70px 0 100px; }
 
+#comments label,
+#comments span,
+#comments .comment-notes {
+  display: none; }
 #comments button,
 #comments input[type="button"],
 #comments input[type="submit"],
@@ -549,7 +554,8 @@ textarea {
 #comments input[type="url"],
 #comments textarea,
 #comments input {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  width: 100%; }
 
 ul.comment-list {
   margin: 0;
@@ -933,11 +939,6 @@ a {
   max-width: 800px;
   margin: 0 auto 100px; }
 
-.yarpp-related {
-  background-color: #ebebec;
-  padding: 100px 0;
-  margin-bottom: 100px !important; }
-
 .entry-header img {
   margin-bottom: 2em; }
 .entry-header h1 {
@@ -1015,6 +1016,33 @@ a {
       padding-bottom: 1em; }
     #featured-posts article header {
       margin: 0 auto; }
+
+.yarpp-related {
+  background-color: #ebebec;
+  padding: 50px 150px;
+  margin-bottom: 100px !important; }
+  .yarpp-related h4 {
+    text-align: center;
+    color: #121a25; }
+  .yarpp-related em {
+    color: #b1b3b6;
+    font-size: 12px; }
+  .yarpp-related ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .yarpp-related ul:after {
+      content: "";
+      display: table;
+      table-layout: fixed;
+      clear: both; }
+  .yarpp-related li {
+    float: left;
+    width: 25%;
+    padding: 2em; }
+    .yarpp-related li img {
+      width: 100%;
+      padding-bottom: 1em; }
 
 .about-me {
   margin-left: auto;

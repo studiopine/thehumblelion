@@ -10,11 +10,9 @@ Author: mitcho (Michael Yoshitaka Erlewine)
 	<?php while (have_posts()) : the_post(); ?>
 		<?php if (has_post_thumbnail()):?>
 			<li>
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-					<?php the_post_thumbnail('thumbnail'); ?>
-					<?php lion_posted_on(); ?>
-					<?php the_title(); ?>
-					</a>
+				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('featured-post'); ?></a>
+					<em><?php lion_posted_on(); ?></em><br />
+					<span class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></span>
 				</li>
 		<?php endif; ?>
 	<?php endwhile; ?>

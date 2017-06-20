@@ -25,22 +25,60 @@ if ( post_password_required() ) {
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				//printf( // WPCS: XSS OK.
-					//esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'lion' ) ),
-					//number_format_i18n( get_comments_number() ),
-					//'<span>' . get_the_title() . '</span>'
-				//);
-			?>
-			<?php
-				printf( // WPCS: XSS OK.				
-					'<span>' . 'Join the ' . '<i>' . 'conversation' . '</i>' . '</span>'
-				);
-			?>
-		</h2><!-- .comments-title -->
+		<?php
+			//printf( // WPCS: XSS OK.
+				//esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'lion' ) ),
+				//number_format_i18n( get_comments_number() ),
+				//'<span>' . get_the_title() . '</span>'
+			//);
+		?>
+		<?php
+			printf( // WPCS: XSS OK.				
+				'<h2 class="comments-title">' . 'Join the ' . '<i>' . 'conversation' . '</i>' . '</h2>'
+			);
+		?>
+		<!-- .comments-title -->
 
-		<?php comment_form(); ?>
+		<?php 
+
+		$comments_args = array(
+        // change the title of send button 
+        'label_submit'=>'Post',
+        // change the title of the reply section
+        'title_reply'=>'',
+        // remove "Text or HTML to be displayed after the set of comment fields"
+        'comment_notes_after' => '',
+        // redefine your own textarea (the comment body)
+        'fields' => apply_filters( 'comment_form_default_fields', array(
+
+			'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .
+
+		        '<input id="author" name="author" type="text" placeholder="Name" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . '  /></p>',   
+
+		    'email'  => '<p class="comment-form-email">' .
+
+		               	'<label for="email">' . __( 'Your Email Please' ) . '</label> ' .
+
+		                ( $req ? '<span>*</span>' : '' ) .
+
+		                '<input id="email" name="email" type="text" placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />'.'</p>',
+
+		    'url'    => '<p class="comment-form-website">' .
+
+		               	'<label for="website">' . __( 'Website' ) . '</label> ' .
+
+		                ( $req ? '<span>*</span>' : '' ) .
+
+		                '<input id="website" name="website" type="text" placeholder="Website" value="' . esc_attr(  $commenter['comment_author_link'] ) . '" />'.'</p>', 
+
+        ) ),
+
+        'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" rows="8" aria-required="true" placeholder="Comment"></textarea></p>',
+		);
+
+		comment_form($comments_args);
+
+		?>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">

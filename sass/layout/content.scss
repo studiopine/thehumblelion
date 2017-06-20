@@ -54,11 +54,7 @@
 	}
 }
 
-.yarpp-related {
-	background-color: $lightgrey;
-	padding: 100px 0;
-	margin-bottom: 100px !important;
-}
+
 
 .entry-header {
 	img {
@@ -149,6 +145,37 @@
 		}
 		header {
 			margin: 0 auto;
+		}
+	}
+}
+
+.yarpp-related {
+	background-color: $lightgrey;
+	padding: 50px $section-padding;
+	margin-bottom: 100px !important;
+	h4 {
+		text-align: center;
+		color: $passportblue;
+	}
+	em {
+		color: #b1b3b6;
+		font-size: 12px;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		&:after {
+			@include clearfix;
+		}
+	}
+	li {
+		float: left;
+		width: 1 / 4 * 100%;
+		padding: 2em;
+		img {
+			width: 100%;
+			padding-bottom: 1em;
 		}
 	}
 }
