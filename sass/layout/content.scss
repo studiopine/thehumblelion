@@ -234,6 +234,34 @@
 	}
 }
 
+.about-wrapper {
+	margin: 0 100px 100px;
+	&:after {
+		@include clearfix;
+	}
+}
+
+.about-left,
+.about-right {
+	float: left;
+	width: 50%;
+	padding: 0 3.5%;
+}
+
+.list-section {
+	text-align: center;
+	margin: 5em 4em;
+	h3 {
+		padding-bottom: 1em;
+	}
+	ul {
+		@include two-columns;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
 .wisdom-wall {
 	margin: 0 $section-padding 100px;
 	.wisdom-location {

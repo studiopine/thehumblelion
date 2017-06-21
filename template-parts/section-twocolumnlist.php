@@ -1,24 +1,34 @@
-<?php 
+<div class="list-section">
+	<?php 
 
-	if ( get_sub_field('list_title') ) {
-		the_sub_field('list_title');
-	}
+		if ( get_sub_field('list_title') ) { ?>
+			
+			<h3><?php the_sub_field('list_title'); ?></h3>
+		
+		<?php }
 
-	// check if the repeater field has rows of data
-	if( have_rows('list_item') ):
+		// check if the repeater field has rows of data
+		if( have_rows('list_item') ): ?>
 
-	 	// loop through the rows of data
-	    while ( have_rows('list_item') ) : the_row();
+			<ul>
 
-	        // display a sub field value
-	        the_sub_field('item');
+		 	<?php 
+		 	// loop through the rows of data
+		    while ( have_rows('list_item') ) : the_row(); ?>
 
-	    endwhile;
+		        <li><?php the_sub_field('item'); ?></li>
 
-	else :
+		    <?php
+		    endwhile; ?>
 
-	    // no rows found
+		    </ul>
 
-	endif;
-	
-?>
+		<?php
+		else :
+
+		    // no rows found
+
+		endif;
+		
+	?>
+</div>

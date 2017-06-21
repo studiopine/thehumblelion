@@ -1,12 +1,12 @@
-<?php 
+<div class="about-right">
 
-	if ( has_post_thumbnail() ) {
-		the_post_thumbnail();
-	}
+	<?php 
 
-	if ( get_sub_field('subheading') ) {
-		the_sub_field('subheading');
-	}
+	if ( get_sub_field('subheading') ) { ?>
+		
+		<em><?php the_sub_field('subheading'); ?></em>
+
+	<?php }
 
 	if ( get_sub_field('heading') ) { ?>
 
@@ -18,4 +18,6 @@
 		the_sub_field('content');
 	}
 	
-?>
+	?>
+
+</div>

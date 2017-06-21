@@ -14,29 +14,64 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php // open the WordPress loop
-			if (have_posts()) : while (have_posts()) : the_post();
+			if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+			<div class="about-wrapper">
+
+				<?php
+				// are there any rows within within our flexible content?
+				if( have_rows('about_page_left') ): ?>
+
+					<div class="about-left">
+
+					<?php
+					// loop through all the rows of flexible content
+					while ( have_rows('about_page_left') ) : the_row();
+
+						// IMAGE
+						if( get_row_layout() == 'bio_photo' )
+							get_template_part('template-parts/section', 'biophoto');	
+
+						// TWO COLUMN LIST
+						if( get_row_layout() == 'list' )
+							get_template_part('template-parts/section', 'twocolumnlist');			
+
+					endwhile; // close the loop of flexible content ?>
+
+					</div>
+
+				<?php
+				endif; // close flexible content conditional
 
 				// are there any rows within within our flexible content?
-				if( have_rows('about_page_content') ): 
+				if( have_rows('about_page_right') ): 
 
 					// loop through all the rows of flexible content
-					while ( have_rows('about_page_content') ) : the_row();
+					while ( have_rows('about_page_right') ) : the_row();
 
-					// PHOTO LEFT TEXT RIGHT
-					if( get_row_layout() == 'photo_left_text_right' )
-						get_template_part('template-parts/section', 'photolefttextright');
+						// PHOTO LEFT TEXT RIGHT
+						if( get_row_layout() == 'about_right' )
+							get_template_part('template-parts/section', 'aboutright');				
 
-					// TWO COLUMN LIST
-					if( get_row_layout() == 'two_column_list' )
-						get_template_part('template-parts/section', 'twocolumnlist');
+					endwhile; // close the loop of flexible content
+				endif; // close flexible content conditional ?>
 
-					// FULL WIDTH
-					if( get_row_layout() == 'full_width' )
-						get_template_part('template-parts/section', 'fullwidth');
+			</div>
 
-					// GALLERY
-					if( get_row_layout() == 'gallery' )
-						get_template_part('template-parts/section', 'gallery');					
+				<?php
+				// are there any rows within within our flexible content?
+				if( have_rows('about_page_full_width') ): 
+
+					// loop through all the rows of flexible content
+					while ( have_rows('about_page_full_width') ) : the_row();
+
+						// FULL WIDTH
+						if( get_row_layout() == 'full_width' )
+							get_template_part('template-parts/section', 'fullwidth');
+
+						// GALLERY
+						if( get_row_layout() == 'gallery' )
+							get_template_part('template-parts/section', 'gallery');					
 
 					endwhile; // close the loop of flexible content
 				endif; // close flexible content conditional
