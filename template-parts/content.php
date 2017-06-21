@@ -13,9 +13,11 @@
 
 	<header class="entry-header">
 
-		<?php
-		if ( has_post_thumbnail() ) {
-			the_post_thumbnail( array(800) ); }; ?>
+		<div class="featured-image">
+			<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( array(800) ); }; ?>
+		</div>
 
 		<div class="entry-content">
 

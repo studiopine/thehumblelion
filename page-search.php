@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template for searching
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
@@ -9,22 +9,65 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<div id="primary" class="search-page content-area">
 		<main id="main" class="site-main" role="main">
 
-			<header>
+			<?php // open the WordPress loop
+			if (have_posts()) : while (have_posts()) : the_post();
 
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'lion' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header>
+				if ( has_post_thumbnail() ) { ?>
 
-			<article class="section">
+					<div class="thl-hero-img"><?php the_post_thumbnail('full'); ?></div>
 
-				<?php get_search_form(); ?>
+				<?php 
+				};
 
-			</article>
+				// are there any rows within within our flexible content?
+				if( have_rows('above_search_form') ): 
+
+					// loop through all the rows of flexible content
+					while ( have_rows('above_search_form') ) : the_row();
+
+					// PHOTO LEFT TEXT RIGHT
+					if( get_row_layout() == 'work_section' )
+						get_template_part('template-parts/section', 'services');
+
+					endwhile; // close the loop of flexible content
+
+				endif; // close flexible content conditional
+
+				// are there any rows within within our flexible content?
+				if( have_rows('search_form') ): 
+
+					// loop through all the rows of flexible content
+					while ( have_rows('search_form') ) : the_row();
+
+					// PHOTO LEFT TEXT RIGHT
+					if( get_row_layout() == 'search_form_header' )
+						get_template_part('template-parts/section', 'searchform');
+
+					endwhile; // close the loop of flexible content
+
+				endif; // close flexible content conditional ?>
+
+				<?php
+				// are there any rows within within our flexible content?
+				if( have_rows('below_search_form') ): 
+
+					// loop through all the rows of flexible content
+					while ( have_rows('below_search_form') ) : the_row();
+
+					// PHOTO LEFT TEXT RIGHT
+					if( get_row_layout() == 'work_section' )
+						get_template_part('template-parts/section', 'services');
+
+					endwhile; // close the loop of flexible content
+				endif; // close flexible content conditional
+
+			endwhile; endif; // close the WordPress loop ?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
 <?php
 get_sidebar();

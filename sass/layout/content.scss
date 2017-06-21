@@ -1,6 +1,12 @@
 #main {
 	padding-top: 150px;
 }
+.search #main {
+	padding-top: 75px;
+	.page-header {
+		margin-bottom: 100px;
+	}
+}
 
 .section {
 	margin-bottom: 100px;
@@ -18,7 +24,15 @@
 	margin-top: -100px;
 }
 
-.blog {
+.page-header {
+	text-align: center;
+}
+
+.blog,
+.search {
+	.featured-image {
+		text-align: center;
+	}
 	.content-area {
 		max-width: $max-width;
 		margin: 0 auto;

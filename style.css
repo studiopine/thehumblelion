@@ -451,7 +451,7 @@ input[type="reset"] {
   margin-bottom: 0; }
 
 .thl-form {
-  padding: 100px 350px; }
+  padding: 0 350px; }
 
 .newsletter-form {
   padding: 0 150px; }
@@ -506,7 +506,9 @@ textarea {
   color: #231f20 !important;
   border: 1px solid #231f20;
   border-radius: 0;
-  padding: 20px 20px 10px; }
+  padding: 20px 20px 10px;
+  width: 100%;
+  margin-bottom: 2em; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -903,6 +905,11 @@ a {
 #main {
   padding-top: 150px; }
 
+.search #main {
+  padding-top: 75px; }
+  .search #main .page-header {
+    margin-bottom: 100px; }
+
 .section {
   margin-bottom: 100px; }
   .section h1,
@@ -915,14 +922,24 @@ a {
 .thl-hero-img {
   margin-top: -100px; }
 
-.blog .content-area {
+.page-header {
+  text-align: center; }
+
+.blog .featured-image,
+.search .featured-image {
+  text-align: center; }
+.blog .content-area,
+.search .content-area {
   max-width: 800px;
   margin: 0 auto; }
-.blog #content {
+.blog #content,
+.search #content {
   padding: 150px 0 0; }
-.blog article {
+.blog article,
+.search article {
   padding-bottom: 150px; }
-.blog a.more-link {
+.blog a.more-link,
+.search a.more-link {
   font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2.5px;

@@ -16,7 +16,8 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'lion' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h4>Search Results For</h4>
+				<h1><?php echo get_search_query(); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php
@@ -42,6 +43,10 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
+
+	<?php get_template_part( 'template-parts/content', 'featured' ); ?><!-- #featured-posts -->
+
+	<?php get_template_part( 'template-parts/section', 'blogform' ); ?><!-- #blog-form -->
 
 <?php
 get_sidebar();
