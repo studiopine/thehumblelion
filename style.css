@@ -644,6 +644,14 @@ a {
   a:hover, a:active {
     outline: 0; }
 
+.tg-ajax-button span {
+  color: white !important;
+  background-color: #121a25;
+  padding: 14px 80px 12px;
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px; }
+
 .post-navigation {
   text-align: center;
   margin-bottom: 150px;

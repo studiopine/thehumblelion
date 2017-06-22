@@ -19,6 +19,15 @@ a {
 	}
 }
 
+.tg-ajax-button span {
+    color: white !important;
+    background-color: $passportblue;
+    padding: 14px 80px 12px;
+    font-family: $font__sub;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
 // .button-link {
 // 	font-size: 12px;
 // 	line-height: 28px;
