@@ -27,9 +27,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lion' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-
-	<?php if ( ! is_front_page() ) : ?>
+	<header id="masthead" class="site-header" role="banner">		
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="left-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lion' ); ?></button>
@@ -49,11 +47,16 @@
             <?php endif; ?>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'right-menu' ) ); ?>
+
 		</nav><!-- #site-navigation -->
 
-		<?php else : ?>
+		<div class="thl-hero-img">
+			<div class="inner">
+				<?php the_header_image_tag(); ?>
+			</div>
+		</div>
 
-		<?php endif; ?>
+
 		
 	</header><!-- #masthead -->
 

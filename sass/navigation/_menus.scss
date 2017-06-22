@@ -1,7 +1,6 @@
 #masthead {
-	// position: fixed;
-	// top: 0;
 	width: 100%;
+	position: relative;
 }
 
 #left-menu {
@@ -130,6 +129,12 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 	}
+}
+
+.home .main-navigation {
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
 .footer-navigation {

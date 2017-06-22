@@ -666,7 +666,8 @@ a {
 ## Menus
 --------------------------------------------------------------*/
 #masthead {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 #left-menu {
   float: left;
@@ -752,6 +753,11 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none; }
+
+.home .main-navigation {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
 
 .footer-navigation {
   -webkit-column-count: 2;
@@ -929,6 +935,22 @@ a {
   #site-logo a {
     width: 100%;
     height: 100%; }
+
+.thl-hero-img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; }
+  .thl-hero-img .inner {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    z-index: 5;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    background-position: 50% 50%; }
 
 #main {
   padding-top: 62px; }

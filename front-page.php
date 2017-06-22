@@ -15,13 +15,6 @@ get_header(); ?>
 			<?php // open the WordPress loop
 			if (have_posts()) : while (have_posts()) : the_post();
 
-				if ( has_post_thumbnail() ) { ?>
-
-					<div class="thl-hero-img"><?php the_post_thumbnail('full'); ?></div>
-
-				<?php 
-				};
-
 				// are there any rows within within our flexible content?
 				if( have_rows('home_page_content') ): 
 

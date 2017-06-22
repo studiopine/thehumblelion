@@ -20,8 +20,8 @@ function lion_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'lion_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 1920,
+		'height'                 => 1080,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'lion_header_style',
 	) ) );
