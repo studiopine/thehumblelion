@@ -50,13 +50,14 @@
 
 		</nav><!-- #site-navigation -->
 
-		<div class="thl-hero-img">
-			<div class="inner">
-				<?php the_header_image_tag(); ?>
+		<?php if ( is_front_page() ): ?>
+			<div class="thl-hero-img">
+				<div class="inner">
+					<?php the_header_image_tag(); ?>
+				</div>
 			</div>
-		</div>
-
-
+		<?php else : ?>
+		<?php endif; ?>
 		
 	</header><!-- #masthead -->
 

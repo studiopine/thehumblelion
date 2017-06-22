@@ -29,6 +29,7 @@ function lion_customize_register( $wp_customize ) {
 	      'section'   => 'lion_logo_section',
 	      'settings'  => 'lion_logo',
 	  ) ) );
+	  
 }
 add_action( 'customize_register', 'lion_customize_register' );
 
@@ -42,6 +43,12 @@ function lion_customize_css()
               background-size: 100px 62px;
               width: 100px;
               height: 62px;
+             }
+
+             .thl-hero-image .inner {
+             	background-image: url('<?php echo get_theme_mod('home_banner'); ?>');
+             	background-repeat: no-repeat;
+             	background-origin: padding-box;
              }
 
          </style>
