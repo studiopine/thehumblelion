@@ -1,4 +1,4 @@
-<div class="section">
+<div class="fullwidth section">
 <?php 
 
 	if ( get_sub_field('subheading') ) { ?>

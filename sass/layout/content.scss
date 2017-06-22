@@ -16,19 +16,26 @@
 .section {
 	margin: 100px $section-padding;
 	// margin-bottom: 100px;
+}
+
+.fullwidthtext,
+.fullwidth {
 	h1,
 	h4 {
 		text-align: center;
 	}
 }
 
-// .home .thl-hero-img {
-// 	margin-top: -150px;
-// }
+.gallery {
+	h4 {
+		text-align: left;
+	}
+}
 
-// .thl-hero-img {
-// 	margin-top: -100px;
-// }
+.no-results,
+.not-found {
+	padding-bottom: 150px;
+}
 
 .page-header {
 	text-align: center;

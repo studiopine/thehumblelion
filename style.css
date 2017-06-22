@@ -985,9 +985,19 @@ a {
 
 .section {
   margin: 100px 150px; }
-  .section h1,
-  .section h4 {
-    text-align: center; }
+
+.fullwidthtext h1,
+.fullwidthtext h4,
+.fullwidth h1,
+.fullwidth h4 {
+  text-align: center; }
+
+.gallery h4 {
+  text-align: left; }
+
+.no-results,
+.not-found {
+  padding-bottom: 150px; }
 
 .page-header {
   text-align: center; }
