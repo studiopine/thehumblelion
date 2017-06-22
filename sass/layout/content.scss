@@ -1,5 +1,5 @@
 #main {
-	padding-top: 150px;
+	padding-top: 62px;
 }
 .search #main {
 	padding-top: 75px;
@@ -9,20 +9,21 @@
 }
 
 .section {
-	margin-bottom: 100px;
+	margin: 100px $section-padding;
+	// margin-bottom: 100px;
 	h1,
 	h4 {
 		text-align: center;
 	}
 }
 
-.home .thl-hero-img {
-	margin-top: -150px;
-}
+// .home .thl-hero-img {
+// 	margin-top: -150px;
+// }
 
-.thl-hero-img {
-	margin-top: -100px;
-}
+// .thl-hero-img {
+// 	margin-top: -100px;
+// }
 
 .page-header {
 	text-align: center;
@@ -250,7 +251,6 @@
 }
 
 .about-wrapper {
-	margin: 0 100px 100px;
 	&:after {
 		@include clearfix;
 	}
@@ -278,7 +278,7 @@
 }
 
 .wisdom-wall {
-	margin: 0 $section-padding 100px;
+	// margin: 0 $section-padding 100px;
 	.wisdom-location {
 		font-family: $font__sub;
 	}
@@ -341,14 +341,14 @@
 }
 
 .fullwidthtext {
-	padding: 0 150px;
+	// padding: 0 150px;
 	.text {
 		@include two-columns;
 	}
 }
 
-.services {
-	margin: 100px $section-padding;
+.services,
+.categories {
 	// padding: 100px 0 75px;
 	text-align: center;
 	ul {

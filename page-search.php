@@ -29,8 +29,8 @@ get_header(); ?>
 					while ( have_rows('above_search_form') ) : the_row();
 
 					// PHOTO LEFT TEXT RIGHT
-					if( get_row_layout() == 'work_section' )
-						get_template_part('template-parts/section', 'services');
+					if( get_row_layout() == 'three_columns' )
+						get_template_part('template-parts/section', 'categories');
 
 					endwhile; // close the loop of flexible content
 
@@ -48,23 +48,11 @@ get_header(); ?>
 
 					endwhile; // close the loop of flexible content
 
-				endif; // close flexible content conditional ?>
-
-				<?php
-				// are there any rows within within our flexible content?
-				if( have_rows('below_search_form') ): 
-
-					// loop through all the rows of flexible content
-					while ( have_rows('below_search_form') ) : the_row();
-
-					// PHOTO LEFT TEXT RIGHT
-					if( get_row_layout() == 'work_section' )
-						get_template_part('template-parts/section', 'services');
-
-					endwhile; // close the loop of flexible content
 				endif; // close flexible content conditional
 
 			endwhile; endif; // close the WordPress loop ?>
+
+			<?php get_template_part( 'template-parts/content', 'featured' ); ?><!-- #featured-posts -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

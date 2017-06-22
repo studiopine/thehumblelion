@@ -903,7 +903,7 @@ a {
     height: 100%; }
 
 #main {
-  padding-top: 150px; }
+  padding-top: 62px; }
 
 .search #main {
   padding-top: 75px; }
@@ -911,16 +911,10 @@ a {
     margin-bottom: 100px; }
 
 .section {
-  margin-bottom: 100px; }
+  margin: 100px 150px; }
   .section h1,
   .section h4 {
     text-align: center; }
-
-.home .thl-hero-img {
-  margin-top: -150px; }
-
-.thl-hero-img {
-  margin-top: -100px; }
 
 .page-header {
   text-align: center; }
@@ -1114,13 +1108,11 @@ a {
     table-layout: fixed;
     clear: both; }
 
-.about-wrapper {
-  margin: 0 100px 100px; }
-  .about-wrapper:after {
-    content: "";
-    display: table;
-    table-layout: fixed;
-    clear: both; }
+.about-wrapper:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both; }
 
 .about-left,
 .about-right {
@@ -1147,12 +1139,10 @@ a {
       clear: both;
       content: ''; }
 
-.wisdom-wall {
-  margin: 0 150px 100px; }
-  .wisdom-wall .wisdom-location {
-    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
-  .wisdom-wall .wisdom-author {
-    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+.wisdom-wall .wisdom-location {
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+.wisdom-wall .wisdom-author {
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 
 .home-gallery .gallery-heading,
 .gallery .gallery-heading,
@@ -1204,36 +1194,38 @@ a {
   .gallery h4 {
     color: #121a25; }
 
-.fullwidthtext {
-  padding: 0 150px; }
-  .fullwidthtext .text {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 40px;
-    column-gap: 40px;
-    -moz-column-gap: 40px; }
-    .fullwidthtext .text:after {
-      clear: both;
-      content: ''; }
+.fullwidthtext .text {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 40px;
+  column-gap: 40px;
+  -moz-column-gap: 40px; }
+  .fullwidthtext .text:after {
+    clear: both;
+    content: ''; }
 
-.services {
-  margin: 100px 150px;
+.services,
+.categories {
   text-align: center; }
-  .services ul {
+  .services ul,
+  .categories ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-    .services ul:after {
+    .services ul:after,
+    .categories ul:after {
       content: "";
       display: table;
       table-layout: fixed;
       clear: both; }
-    .services ul li {
+    .services ul li,
+    .categories ul li {
       float: left;
       width: 33.33333%;
       padding: 30px 2%; }
-  .services i {
+  .services i,
+  .categories i {
     font-weight: 600; }
 
 #colophon {

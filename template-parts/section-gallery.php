@@ -1,4 +1,4 @@
-<div class="<?php if ( is_front_page() ) : ?>home-gallery<?php else : ?>gallery<?php endif; ?>">
+<div class="<?php if ( is_front_page() ) : ?>home-gallery<?php else : ?>gallery<?php endif; ?> section">
 	<div class="gallery-heading">
 		
 		<?php 

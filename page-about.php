@@ -16,7 +16,7 @@ get_header(); ?>
 			<?php // open the WordPress loop
 			if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<div class="about-wrapper">
+			<div class="about-wrapper section">
 
 				<?php
 				// are there any rows within within our flexible content?

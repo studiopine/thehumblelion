@@ -1,4 +1,4 @@
-<div class="wisdom-wall">
+<div class="wisdom-wall section">
 <?php 
 
   if ( get_sub_field('wisdom_shortcode') ) {

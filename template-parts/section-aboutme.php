@@ -1,4 +1,4 @@
-<div class="about-me section">
+<div class="about-me">
 
 	<div class="left">
 
