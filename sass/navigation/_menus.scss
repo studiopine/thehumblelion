@@ -139,6 +139,13 @@
 	padding-bottom: 1em;
 }
 
+.fixed-nav {
+	background-color: $passportblue;
+	position: fixed;
+	top: 0;
+	padding-bottom: 0;
+}
+
 .footer-navigation {
 	@include two-columns;
 	font-family: $font__sub;
