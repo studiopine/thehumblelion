@@ -23,12 +23,8 @@
 		    while ( have_rows('categories') ) : the_row(); ?>
 
 					<li>
-				        <i><?php the_sub_field('title'); ?></i><br><br>
+				        <i><a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('title'); ?></a></i><br><br>
 				        <?php the_sub_field('description'); ?>
-
-				        <?php if ( get_sub_field('link') ) { ?>
-							<span class="button-link"><a href="<?php the_sub_field('link'); ?>">Read posts</a></span>
-				        <?php } ?>
 				        
 			        </li>
 

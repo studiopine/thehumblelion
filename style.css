@@ -668,6 +668,8 @@ a {
       font-style: italic; }
       #blog-menu ul li a {
         color: #121a25; }
+    #blog-menu ul li.current-menu-item a {
+      color: #7d5a46; }
 
 .main-navigation {
   font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
@@ -905,9 +907,13 @@ a {
 #main {
   padding-top: 62px; }
 
-.search #main {
+.search #main,
+.category #main,
+.archive #main {
   padding-top: 75px; }
-  .search #main .page-header {
+  .search #main .page-header,
+  .category #main .page-header,
+  .archive #main .page-header {
     margin-bottom: 100px; }
 
 .section {
@@ -920,20 +926,30 @@ a {
   text-align: center; }
 
 .blog .featured-image,
-.search .featured-image {
+.search .featured-image,
+.archive .featured-image,
+.category .featured-image {
   text-align: center; }
 .blog .content-area,
-.search .content-area {
+.search .content-area,
+.archive .content-area,
+.category .content-area {
   max-width: 800px;
   margin: 0 auto; }
 .blog #content,
-.search #content {
+.search #content,
+.archive #content,
+.category #content {
   padding: 150px 0 0; }
 .blog article,
-.search article {
+.search article,
+.archive article,
+.category article {
   padding-bottom: 150px; }
 .blog a.more-link,
-.search a.more-link {
+.search a.more-link,
+.archive a.more-link,
+.category a.more-link {
   font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2.5px;

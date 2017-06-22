@@ -56,7 +56,7 @@
 		
 	</header><!-- #masthead -->
 
-	<?php if ( is_home() or is_single() or is_search() ): ?>
+	<?php if ( is_home() or is_single() or is_search() or is_archive() ): ?>
 		<div id="blog-menu">
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-5', 'menu_id' => 'blog-menu' ) ); ?>
 		</div>

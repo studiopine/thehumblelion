@@ -18,16 +18,14 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text">Category: <?php single_cat_title( '', false ); ?></h1>
-				</header>
+		if ( have_posts() ) : ?>
+<!-- 
+			<header class="page-header">
+				<h4>Category</h4>
+				<h1><?php single_cat_title(); ?></h1>
+			</header><!-- .page-header -->
 
 			<?php
-			endif;
-
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 

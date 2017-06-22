@@ -15,11 +15,9 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+<!-- 			<header class="page-header">
+				<h4>Category</h4>
+				<!-- <h1><?php echo get_archive_title(); ?></h1> -->
 			</header><!-- .page-header -->
 
 			<?php

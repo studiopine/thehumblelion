@@ -1,7 +1,9 @@
 #main {
 	padding-top: 62px;
 }
-.search #main {
+.search #main,
+.category #main,
+.archive #main {
 	padding-top: 75px;
 	.page-header {
 		margin-bottom: 100px;
@@ -30,7 +32,9 @@
 }
 
 .blog,
-.search {
+.search,
+.archive,
+.category {
 	.featured-image {
 		text-align: center;
 	}
