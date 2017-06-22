@@ -37,3 +37,16 @@
 		text-align: right;
 	}
 }
+
+// Footer Social Menu
+#footer-social {
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			display: inline-block;
+			padding: 0 0.5em 0 0;
+		}
+	}
+}

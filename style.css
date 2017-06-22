@@ -255,7 +255,8 @@ h2 {
   line-height: 52px;
   letter-spacing: 0.15px;
   font-weight: 400;
-  color: #231f20; }
+  color: #231f20;
+  margin: 0 0 10px 0; }
 
 h3 {
   font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
@@ -469,13 +470,17 @@ input[type="reset"] {
     width: 100% !important; }
 
 .list-checkbox-wrap {
-  padding-top: 60px;
-  padding-bottom: 95px;
+  padding: 50px 0 0;
   margin: 0 auto; }
   .list-checkbox-wrap li {
     width: 33.33333%;
     float: left;
-    text-align: left; }
+    text-align: left;
+    font-size: 18px; }
+
+.list-radio-wrap .nf-field-element li label,
+.list-checkbox-wrap .nf-field-element li label {
+  display: block !important; }
 
 .nf-form-fields-required {
   display: none; }
@@ -485,6 +490,9 @@ input[type="reset"] {
 
 .nf-field-container {
   margin-bottom: 0 !important; }
+
+.newsletter-form li label {
+  padding-bottom: 1.5em; }
 
 input[type="text"],
 input[type="email"],
@@ -533,6 +541,31 @@ select {
 textarea {
   width: 100%; }
 
+input[type=checkbox] {
+  display: none; }
+
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: block;
+  float: left;
+  font-size: 1.75em; }
+
+input[type=checkbox] + label:before {
+  content: "\f096"; }
+
+/* unchecked icon */
+input[type=checkbox] + label:before {
+  letter-spacing: 40px; }
+
+/* space between checkbox and label */
+input[type=checkbox]:checked + label:before {
+  content: "\f046"; }
+
+/* checked icon */
+input[type=checkbox]:checked + label:before {
+  letter-spacing: 35.5px; }
+
+/* allow space for check mark */
 h2.comments-title {
   text-align: center;
   margin-bottom: 0; }
@@ -741,13 +774,6 @@ a {
     .footer-navigation ul li {
       list-style: none; }
 
-#footer-social ul {
-  margin: 0;
-  padding: 0; }
-  #footer-social ul li {
-    list-style: none;
-    display: inline-block; }
-
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -906,6 +932,9 @@ a {
 
 #main {
   padding-top: 62px; }
+
+.home #main {
+  padding-top: 0; }
 
 .search #main,
 .category #main,
@@ -1075,6 +1104,7 @@ a {
       padding-bottom: 1em; }
 
 .about-me {
+  margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
   width: 68%;
@@ -1271,6 +1301,14 @@ a {
     float: right;
     width: 50%;
     text-align: right; }
+
+#footer-social ul {
+  margin: 0;
+  padding: 0; }
+  #footer-social ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 0.5em 0 0; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

@@ -23,9 +23,9 @@
 
 		<div id="footer-social">
 			<ul>
-				<li><a href="<?php the_field( 'instagram', 'options' ) ?>" target="_blank">Instagram</a></li>
-				<li><a href="<?php the_field( 'facebook', 'options' ) ?>" target="_blank">Facebook</a></li>
-				<li><a href="<?php the_field( 'pinterest', 'options' ) ?>" target="_blank">Pinterest</a></li>
+				<li><a href="<?php the_field( 'instagram', 'options' ) ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="<?php the_field( 'facebook', 'options' ) ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="<?php the_field( 'pinterest', 'options' ) ?>" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
 			</ul>
 		</div>
 

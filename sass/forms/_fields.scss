@@ -8,6 +8,10 @@
 	margin-bottom: 0!important;
 }
 
+.newsletter-form li label {
+	padding-bottom: 1.5em;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -43,3 +47,30 @@ select {
 textarea {
 	width: 100%;
 }
+
+// Custom checkbox styling
+
+input[type=checkbox] { 
+	display:none; 
+}
+
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: block;
+  float: left;
+  font-size: 1.75em;
+}
+
+input[type=checkbox] + label:before { 
+	content: "\f096"; 
+} /* unchecked icon */
+input[type=checkbox] + label:before { 
+	letter-spacing: 40px; 
+} /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { 
+	content: "\f046"; 
+} /* checked icon */
+input[type=checkbox]:checked + label:before { 
+	letter-spacing: 35.5px; 
+} /* allow space for check mark */

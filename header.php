@@ -18,6 +18,7 @@
 
 <script src="https://use.typekit.net/bzw2eqc.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script src="https://use.fontawesome.com/85c16a0e2e.js"></script>
 
 <?php wp_head(); ?>
 </head>
