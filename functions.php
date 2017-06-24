@@ -198,6 +198,8 @@ function lion_comment($comment, $args, $depth) {
 function lion_scripts() {
 	wp_enqueue_style( 'lion-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'lion-headhesive', get_template_directory_uri() . '/js/headhesive.js', array(), true );
+
 	wp_enqueue_script( 'lion-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'lion-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -207,6 +209,37 @@ function lion_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'lion_scripts' );
+
+function lion_footer_js() { 
+
+if ( is_front_page() ): ?>
+
+	<script>
+
+        // Set options
+        var options = {
+            offset: '#showHere',
+            offsetSide: 'top',
+            classes: {
+                clone:   'banner--clone',
+                stick:   'banner--stick',
+                unstick: 'banner--unstick'
+            }
+        };
+
+        // Initialise with options
+        var banner = new Headhesive('.banner', options);
+
+    </script>
+
+<?php 
+else :
+endif; ?>
+
+<?php
+}
+
+add_action( 'wp_footer', 'lion_footer_js' );
 
 /**
  * Implement the Custom Header feature.

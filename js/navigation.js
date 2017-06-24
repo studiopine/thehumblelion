@@ -5,6 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
+
 	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
@@ -103,5 +104,16 @@
 			}
 		}
 	}( container ) );
+
+} )();
+
+( function() {
+
+	var options = {
+		offset: 300,
+		throttle: 250
+	}
+
+	var banner = new Headhesive('.main-navigation', options);
 
 } )();

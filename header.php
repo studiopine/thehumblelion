@@ -29,7 +29,7 @@
 
 	<header id="masthead" class="site-header" role="banner">		
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation" class="<?php if ( is_front_page() ): ?>banner<?php else : ?>main-navigation<?php endif; ?>" role="navigation">
 			<button class="menu-toggle" aria-controls="left-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lion' ); ?></button>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'left-menu' ) ); ?>
@@ -60,6 +60,8 @@
 		<?php endif; ?>
 		
 	</header><!-- #masthead -->
+
+	<a id="showHere"></a>
 
 	<?php if ( is_home() or is_single() or is_search() or is_archive() ): ?>
 		<div id="blog-menu">

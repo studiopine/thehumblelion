@@ -713,67 +713,107 @@ a {
     #blog-menu ul li.current-menu-item a {
       color: #7d5a46; }
 
-.main-navigation {
+.main-navigation,
+.banner {
   font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
   line-height: 26px;
   text-transform: uppercase;
-  position: fixed;
-  z-index: 99999;
-  clear: both;
-  display: block;
-  float: left;
   width: 100%;
-  background-color: #121a25; }
-  .main-navigation ul {
-    display: none;
+  background-color: #121a25;
+  clear: both;
+  z-index: 99999; }
+  .main-navigation ul,
+  .banner ul {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .main-navigation ul li {
+    .main-navigation ul li,
+    .banner ul li {
       padding: 1.5em 10%; }
-    .main-navigation ul ul {
+    .main-navigation ul ul,
+    .banner ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
       top: 1.5em;
       left: -999em;
       z-index: 99999; }
-      .main-navigation ul ul ul {
+      .main-navigation ul ul ul,
+      .banner ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul,
+      .banner ul ul li:hover > ul,
+      .banner ul ul li.focus > ul {
         left: 100%; }
-      .main-navigation ul ul a {
+      .main-navigation ul ul a,
+      .banner ul ul a {
         width: 200px; }
     .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
+    .main-navigation ul li.focus > ul,
+    .banner ul li:hover > ul,
+    .banner ul li.focus > ul {
       left: auto; }
-    .main-navigation ul:after {
+    .main-navigation ul:after,
+    .banner ul:after {
       content: "";
       display: table;
       table-layout: fixed;
       clear: both; }
-  .main-navigation li {
+  .main-navigation li,
+  .banner li {
     display: inline-block;
     position: relative; }
-  .main-navigation a {
+  .main-navigation a,
+  .main-navigation a:visited,
+  .banner a,
+  .banner a:visited {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #dbdcdd; }
+  .main-navigation:after,
+  .banner:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both; }
 
-.home .main-navigation {
+.main-navigation {
+  position: fixed;
+  display: block;
+  float: left; }
+
+.banner {
   position: absolute;
   bottom: 0;
   left: 0;
   background: none;
   padding-bottom: 1em; }
 
-.fixed-nav {
-  background-color: #121a25;
+.banner--clone {
+  /* Required styles */
   position: fixed;
   top: 0;
-  padding-bottom: 0; }
+  left: 0;
+  bottom: auto;
+  background-color: #121a25;
+  padding-bottom: 0;
+  /* Translate -100% to move off screen */
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  /* Animations */
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+
+.banner--stick {
+  /* Translate back to 0%; */
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%); }
 
 .footer-navigation {
   -webkit-column-count: 2;
