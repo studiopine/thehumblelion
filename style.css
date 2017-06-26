@@ -494,6 +494,9 @@ input[type="reset"] {
 .newsletter-form li label {
   padding-bottom: 1.5em; }
 
+#mc_embed_signup label {
+  display: none; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],

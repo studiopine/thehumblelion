@@ -13,9 +13,11 @@
 
 	<?php }
 
-	if ( get_sub_field('form_shortcode') ) {
-		the_sub_field('form_shortcode');
-	}
+	if ( get_sub_field('form_shortcode') ) { ?>
+
+		<div class="thl-form"><?php the_sub_field('form_shortcode'); ?></div>
+
+	<?php }
 
 	if ( get_sub_field('notes') ) { ?>
 

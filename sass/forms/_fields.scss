@@ -12,6 +12,13 @@
 	padding-bottom: 1.5em;
 }
 
+// Mailchimp Styling
+#mc_embed_signup {
+	label {
+		display: none;
+	}
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
