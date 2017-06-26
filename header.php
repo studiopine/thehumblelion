@@ -52,8 +52,8 @@
 
 		<?php if ( is_front_page() ): ?>
 			<div class="thl-hero-img">
-				<div class="inner">
-					<?php the_header_image_tag(); ?>
+				<div class="inner" style="background-image: url('<?php header_image(); ?>')">
+					
 				</div>
 			</div>
 		<?php else : ?>
