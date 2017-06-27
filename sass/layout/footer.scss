@@ -1,6 +1,8 @@
 // Footer styling
 
 #colophon {
+	// padding: 110px 50px 40px 50px;
+	padding: 110px 2em 40px;
 	background-color: $dustyblue;
 	color: $lightgrey;
 	a {
@@ -17,23 +19,30 @@
 	#footer-social {
 		padding: 0 0 30px;
 	}
-}
-
-// Footer layout	
-#colophon {
-	padding: 110px 50px 40px 50px;
-	#footer-left {
-		float: left;
-		width: 50%;
-		text-align: left;
-		.footer-navigation {
-			padding-bottom: 40px;
-			max-width: 250px;
+	.footer-navigation {
+		padding-bottom: 40px;
+		max-width: 250px;
+		margin: 0 auto;
+		@include breakpoint($footer) {
+			margin: 0;
 		}
 	}
-	#footer-right {
-		float: right;
-		width: 50%;
+}
+
+#footer-left,
+#footer-right {
+	text-align: center;
+}
+
+#footer-left {
+	@include breakpoint($footer) {
+		@include span(6 of 12);
+		text-align: left;
+	}	
+}
+#footer-right {
+	@include breakpoint($footer) {
+		@include span(6 of 12 last);
 		text-align: right;
 	}
 }

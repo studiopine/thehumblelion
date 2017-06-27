@@ -35,10 +35,16 @@ input[type="reset"] {
 	margin-bottom: 0;
 }
 .thl-form {
-	padding: 0 $form-padding;
+	padding: 0 2em;
+	// @include breakpoint($aboutme) {
+	// 	padding: 0 $form-padding;
+	// }
 }
 .newsletter-form {
-	padding: 0 $section-padding;
+	padding: 0 2em;
+	@include breakpoint($aboutme) {
+		padding: 0 $section-padding;
+	}
 }
 .contact-form {
 	max-width: 650px;

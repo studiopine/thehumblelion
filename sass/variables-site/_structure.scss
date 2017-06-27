@@ -3,3 +3,14 @@ $size__site-sidebar: 25%;
 $max-width: 800px;
 $section-padding: 150px;
 $form-padding: 350px;
+
+$footer: 46rem;
+$aboutme: 60rem;
+// $ipad: 800px;
+
+$susy: (
+	global-box-sizing: border-box,
+	use-custom: (rem: true
+		),
+	columns: 12
+);

@@ -1,9 +1,15 @@
+.page {
+	@include container;
+}
+
 #main {
 	padding-top: 62px;
 }
+
 .home #main {
 	padding-top: 0;
 }
+
 .search #main,
 .category #main,
 .archive #main {
@@ -14,8 +20,13 @@
 }
 
 .section {
-	margin: 100px $section-padding;
-	// margin-bottom: 100px;
+	margin: 100px 2em;
+	@include breakpoint($footer) {
+		margin: 100px 4em;
+	}
+	@include breakpoint($aboutme) {
+		margin: 100px $section-padding;
+	}
 }
 
 .fullwidthtext,
@@ -32,11 +43,6 @@
 	}
 }
 
-// .no-results,
-// .not-found {
-// 	padding-bottom: 150px;
-// }
-
 .page-header {
 	text-align: center;
 }
@@ -51,6 +57,7 @@
 	.content-area {
 		max-width: $max-width;
 		margin: 0 auto;
+		padding: 0 2em;
 	}
 	#content {
 		padding: 150px 0 0;
@@ -72,79 +79,38 @@
 	}
 }
 
-.single-post {
-	#content {
-		padding: 150px 0 0;
-	}
-	article,
-	#comments {
-		max-width: $max-width;
-		margin: 0 auto 100px;
-	}
-}
-
-.entry-header {
-	img {
-		margin-bottom: 2em;
-	}
-	h1 {
-		margin-bottom: 0;
-	}
-}
-.entry-meta {
-	margin-bottom: 2em;
-}
-.entry-content,
-.featured-image {
-	padding: 0 4em;
-}
-.entry-footer {
-	span {
-		padding: 0 0.5em;
-	}
-}
-.posts-navigation {
-	padding-bottom: 150px;
-	text-align: center;
-	font-family: $font__sub;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	a {
-		color: $black;
-	}
-}
-
-#tagline {
-	padding: 125px 125px 40px;
-	&:after {
-		@include clearfix;
-	}
-	h1 {
-		float: left;
-		width: 75%;
-		margin: 0;
-	}
-	#thl-logomark {
-		float: left;
-		width: 25%;
-		text-align: right;
-		img {
-			max-width: 80px;
-			margin: 0 auto;
-		}		
-	}
-}
-
 #featured-posts {
-	// padding: 50px 0;
+	@include breakpoint($footer) {
+		width: span(10 of 12);
+		padding: 50px 0;
+		.left {
+			position: absolute;
+			top: 30%;
+			left: -95px;
+			transform: rotate(-90deg);
+		}
+		.right {
+			position: absolute;
+			top: 30%;
+			right: -95px;
+			transform: rotate(90deg);
+		}
+		article {
+			@include span(4 of 12);
+			&:nth-child(3n) {
+				@include span(4 of 12 last);
+			}	
+		}
+	}
+	padding: 0 4em;
 	position: relative;
-	width: 86%;
-	margin: 50px auto;
+	margin: 0 auto 50px;
 	&:after {
 		@include clearfix;
 	}
 	.left,
 	.right {
+		text-align: center;
 		font-family: $font__sub;
 		color: $leather;
 		text-transform: uppercase;
@@ -152,21 +118,15 @@
 		letter-spacing: 4.5px;
 	}
 	.left {
-		position: absolute;
-		top: 30%;
-		left: -95px;
-		transform: rotate(-90deg);
+		padding-bottom: 2em;
 	}
 	.right {
-		position: absolute;
-		top: 30%;
-		right: -95px;
-		transform: rotate(90deg);
+		padding-top: 2em;
 	}
 	article {
-		float: left;
-		width: 1/3 * 100%;
-		padding: 0 30px;
+		// float: left;
+		// width: 1/3 * 100%;
+		// padding: 0 30px;
 		img {
 			width: 100%;
 			padding-bottom: 1em;
@@ -208,20 +168,69 @@
 	}
 }
 
+// Home Page ––– Tagline
+
+#tagline {
+	padding: 125px 2em 40px;
+	&:after {
+		@include clearfix;
+	}
+	h1 {
+		width: span(12 of 12);
+	}
+	#thl-logomark {
+		display: none;
+	}
+	@include breakpoint($aboutme) {
+		h1 {
+			@include span(9 of 12);
+		}
+		#thl-logomark {
+			@include span(3 of 12 last);
+			display: inherit;
+			text-align: right;
+			img {
+				max-width: 80px;
+				margin: 0 auto;
+			}	
+		}
+	}
+}
+
+// Home Page ——— About
+
 .about-me {
+	@include breakpoint($aboutme) {
+		height: 530px;
+		overflow: hidden;
+	}
+	width: span(8 of 12);
 	margin-bottom: 100px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 68%;
-	overflow: hidden;
-	height: 530px;
+	.right {
+		@include breakpoint($aboutme) {
+			@include span(7 of 12 last);
+		}
+		height: 100%;
+	}
 	.left {
-		float: left;
+		@include breakpoint($aboutme) {
+			@include span(5 of 12);
+			.about-text {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+		.about-text {
+			padding: 40px;
+		}
+		height: 100%;
 		background: url('inc/TheHumbleLion-Black-large.png');
+		background-color: $black;
 		background-size: 100% auto;
 		color: #ffffff;
-		width: 42%;
-		height: 100%;
 		text-align: center;
 		position: relative;
 		color: $grey;
@@ -243,21 +252,11 @@
 			}
 		}
 		.about-text {
-			padding: 40px;
-			position: absolute;
-			bottom: 0;
-			left: 0;
 			span {
 				padding-bottom: 8em;
 				display: block;
 			}
 		}
-	}
-	.right {
-		// background: url('inc/KaSandraMitchell.jpg');
-		float: right;
-		height: 100%;
-		width: 55%;
 	}
 	&:after {
 		@include clearfix;
@@ -269,6 +268,8 @@
 		@include clearfix;
 	}
 }
+
+// About Page
 
 .about-left,
 .about-right {
@@ -284,12 +285,16 @@
 		padding-bottom: 1em;
 	}
 	ul {
-		@include two-columns;
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		@include breakpoint($aboutme) {
+			@include two-columns;
+		}
 	}
 }
+
+// Wisdom Page
 
 .wisdom-wall {
 	// margin: 0 $section-padding 100px;
@@ -307,15 +312,16 @@
 	.gallery-heading {
 		max-width: 1000px;
 		margin: 0 auto 50px;
-	    h1 {
-			&:after {
-			    content: '';
-			    display: inline-block;
-			    height: 1px;
-			    width: 62%;
-			    background: black;
-			    margin-left: 1em;
-			    margin-bottom: 0.2em;
+		text-align: center;
+		@include breakpoint($footer) {
+		    h1:after {
+				    content: '';
+				    display: inline-block;
+				    height: 1px;
+				    width: 62%;
+				    background: black;
+				    margin-left: 1em;
+				    margin-bottom: 0.2em;
 			}
 	    }
 	    h1,
@@ -356,8 +362,10 @@
 
 .fullwidthtext {
 	// padding: 0 150px;
-	.text {
-		@include two-columns;
+	@include breakpoint($aboutme) {
+		.text {
+			@include two-columns;
+		}
 	}
 }
 
@@ -373,9 +381,13 @@
 			@include clearfix;
 		}
 		li {
-			float: left;
-			width: 1/3 * 100%;
-			padding: 30px 2%;
+			padding: 0 1em 2em;
+			@include breakpoint($aboutme) {
+				@include span(4 of 12);
+				&:nth-child(3n) {
+					@include span(4 of 12 last);
+				}
+			}
 		}
 	}
 	i {

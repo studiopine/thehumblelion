@@ -30,7 +30,7 @@
 	<header id="masthead" class="site-header" role="banner">		
 
 		<nav id="site-navigation" class="<?php if ( is_front_page() ): ?>banner<?php else : ?>main-navigation<?php endif; ?>" role="navigation">
-			<button class="menu-toggle" aria-controls="left-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lion' ); ?></button>
+<!-- 			<button class="menu-toggle" aria-controls="left-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lion' ); ?></button> -->
 
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'left-menu' ) ); ?>
 
@@ -48,7 +48,15 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'right-menu' ) ); ?>
 
+	        <a id="nav-toggle" href="#sidr">Menu</a>
+
 		</nav><!-- #site-navigation -->
+
+        <div id="sidr">
+
+          <div id="responsive-menu"><?php wp_nav_menu( array( 'theme_location' => 'menu-3', 'menu_id' => 'mobile-menu', 'menu_class' => 'menu-inline' ) ); ?></div>
+
+        </div><!-- #sidr -->
 
 		<?php if ( is_front_page() ): ?>
 			<div class="thl-hero-img">

@@ -1,3 +1,54 @@
+// Blog Posts
+
+.single-post {
+	#content {
+		padding: 150px 0 0;
+	}
+	article,
+	#comments {
+		max-width: $max-width;
+		margin: 0 auto 100px;
+		padding: 0 2em;
+	}
+}
+
+.entry-header {
+	img {
+		margin-bottom: 2em;
+	}
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
+.entry-meta {
+	margin-bottom: 2em;
+}
+
+// .entry-content,
+// .featured-image {
+// 	padding: 0 4em;
+// }
+
+.entry-footer {
+	span {
+		padding: 0 0.5em;
+	}
+}
+
+.posts-navigation {
+	padding-bottom: 150px;
+	text-align: center;
+	font-family: $font__sub;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	a {
+		color: $black;
+	}
+}
+
+// Came with template
+
 .sticky {
 	display: block;
 }
