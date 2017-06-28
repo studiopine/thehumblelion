@@ -111,6 +111,10 @@ if ( post_password_required() ) {
 		<?php
 		endif; // Check for comment navigation.
 
+	else :
+
+		comment_form($comments_args);
+
 	endif; // Check for have_comments().
 
 

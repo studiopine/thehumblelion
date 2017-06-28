@@ -53,7 +53,7 @@
 
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'right-menu' ) ); ?>
 
-		        <a id="nav-toggle" href="#sidr">Menu</a>
+		        <a class="nav-toggle" href="#sidr">Menu</a>
 
 			</nav>
 
@@ -82,7 +82,7 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'right-menu' ) ); ?>
 
-	        <a id="nav-toggle" href="#sidr">Menu</a>
+	        <a class="nav-toggle" href="#sidr">Menu</a>
 
 		</nav><!-- #site-navigation -->
 

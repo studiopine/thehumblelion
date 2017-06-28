@@ -24,13 +24,13 @@
 	float: right;
 }
 
-#nav-toggle {
+.nav-toggle {
 	text-align: right;
 	position: absolute;
 	top: 20px;
 	right: 20px;
 	@include breakpoint($smaller-padding) {
-	display: none;
+		display: none;
 	}
 }
 
@@ -156,7 +156,7 @@
 
 	a,
 	a:visited {
-		display: block;
+		// display: block;
 		text-decoration: none;
 		color: $beige;
 	}
@@ -185,6 +185,10 @@
 	left: 0;
 	background: none;	
 }
+
+// #responsive-menu ul ul {
+// 	display: none;
+// }
 
 ul.sub-menu {
 	padding-left: 2.5em;

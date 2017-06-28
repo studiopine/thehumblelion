@@ -6,9 +6,10 @@
  */
 
 jQuery(document).ready(function(e) {
-    e("#nav-toggle").sidr({
+    e(".nav-toggle").sidr({
         side: 'right'
     });
+    e("#sidr").fadeIn(1000);
 });
 
 // ( function() {

@@ -454,14 +454,21 @@
 			padding: 0 1em 2em;
 			@include breakpoint($aboutme) {
 				@include span(4 of 12);
+				min-height: 230px;
 				&:nth-child(3n) {
 					@include span(4 of 12 last);
+					&:after {
+						@include clearfix;
+					}
 				}
 			}
 			@include breakpoint($between) {
 				@include span(6 of 12);
 				&:nth-child(2n) {
 					@include span(6 of 12 last);
+					&:after {
+						@include clearfix;
+					}
 				}
 			}
 		}
