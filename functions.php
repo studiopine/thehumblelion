@@ -107,6 +107,19 @@ function lion_widgets_init() {
 }
 add_action( 'widgets_init', 'lion_widgets_init' );
 
+function lion_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/inc/TheHumbleLion-Logo.png);
+		width: 200px;
+		height: 123px;
+		background-size: 200px 123px;
+		background-repeat: no-repeat;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'lion_login_logo' );
+
 // Exclude Wisdom quotes from Blog page
 function exclude_category( $query ) {
     if ( $query->is_home() && $query->is_main_query() ) {
