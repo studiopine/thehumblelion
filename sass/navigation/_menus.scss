@@ -5,44 +5,67 @@
 #left-menu,
 #right-menu {
 	display: none;
-	width: 45%;
-	text-align: center;
-	@include breakpoint($aboutme) {
+	@include breakpoint($smaller-padding) {
 		display: block;
+		width: 45%;
+		text-align: center;
 	}
 }
 #left-menu {
 	float: left;
 }
 #center-menu {
-	float: left;
-	width: 10%;
+	@include breakpoint($smaller-padding) {
+		float: left;
+		width: 10%;		
+	}
 }
 #right-menu {
 	float: right;
 }
 
 #nav-toggle {
-  @include breakpoint($footer) {
-    display: none;
-  }
-  text-align: right;
+	text-align: right;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	@include breakpoint($smaller-padding) {
+	display: none;
+	}
+}
+
+#mobile-left-link {
+	text-align: left;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	@include breakpoint($smaller-padding) {
+	display: none;
+	}	
+	li {
+		padding: 0;
+	}
 }
 
 #blog-menu {
-	position: fixed;
-	margin-top: 62px;
-	width: 100%;
-	text-align: center;
-	border-bottom: 1px solid $passportblue;
-	background-color: #ffffff;
-	z-index: 99998;
+	display: none;
+	@include breakpoint($smaller-padding) {
+		display: block;
+		position: fixed;
+		margin-top: 62px;
+		width: 100%;
+		text-align: center;
+		border-bottom: 1px solid $passportblue;
+		background-color: #ffffff;
+		z-index: 99998;
+	}
+
 	ul {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 		li {
-			padding: 1.5em 2.5em 1em;
+			padding: 1.5em 3% 1em;
 			display: inline-block;
 			position: relative;
 			font-style: italic;
@@ -74,7 +97,10 @@
 		margin: 0;
 		padding-left: 0;
 		li {
-			padding: 1.5em 10%;
+			padding: 1.5em 8%;
+			@include breakpoint($larger-padding) {
+				padding: 1.5em 10%;
+			}
 		}
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -152,44 +178,56 @@
 	float: left;
 }
 
+ul.sub-menu {
+	padding-left: 2.5em;
+}
+
 .banner {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	background: none;
-	padding-bottom: 1em;
-}
-
-.banner--clone {
-
-  /* Required styles */
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: auto;
-
-  background-color: $passportblue;
-  padding: 1em 2em;
-
-  /* Translate -100% to move off screen */
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
-
-  /* Animations */
-  -webkit-transition: all 300ms ease-in-out;
-     -moz-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
-
+	// padding-bottom: 1em;
 }
 
 .banner--stick {
-
-  /* Translate back to 0%; */
-  -webkit-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-          transform: translateY(0%);
+	position: fixed;
+	top: 0;
+	bottom: auto;
+	background-color: $passportblue;
+	z-index: 99999;
 }
+
+// .banner--clone {
+
+//   /* Required styles */
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   bottom: auto;
+
+//   background-color: $passportblue;
+//   // padding: 0 2em;
+
+//   /* Translate -100% to move off screen */
+//   -webkit-transform: translateY(-100%);
+//       -ms-transform: translateY(-100%);
+//           transform: translateY(-100%);
+
+//   /* Animations */
+//   -webkit-transition: all 300ms ease-in-out;
+//      -moz-transition: all 300ms ease-in-out;
+//           transition: all 300ms ease-in-out;
+
+// }
+
+// .banner--stick {
+
+//   /* Translate back to 0%; */
+//   -webkit-transform: translateY(0%);
+//       -ms-transform: translateY(0%);
+//           transform: translateY(0%);
+// }
 
 .footer-navigation {
 	@include two-columns;

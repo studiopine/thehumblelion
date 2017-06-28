@@ -296,7 +296,10 @@
 		}
 		.about-text {
 			span {
-				padding-bottom: 8em;
+				padding-bottom: 5%;
+				@include breakpoint($aboutme) {
+					padding-bottom: 8em;
+				}
 				display: block;
 			}
 		}

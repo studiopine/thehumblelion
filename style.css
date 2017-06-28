@@ -701,44 +701,63 @@ a {
 
 #left-menu,
 #right-menu {
-  display: none;
-  width: 45%;
-  text-align: center; }
-  @media (min-width: 60rem) {
+  display: none; }
+  @media (min-width: 61rem) {
     #left-menu,
     #right-menu {
-      display: block; } }
+      display: block;
+      width: 45%;
+      text-align: center; } }
 
 #left-menu {
   float: left; }
 
-#center-menu {
-  float: left;
-  width: 10%; }
+@media (min-width: 61rem) {
+  #center-menu {
+    float: left;
+    width: 10%; } }
 
 #right-menu {
   float: right; }
 
 #nav-toggle {
-  text-align: right; }
-  @media (min-width: 46rem) {
+  text-align: right;
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+  @media (min-width: 61rem) {
     #nav-toggle {
       display: none; } }
 
+#mobile-left-link {
+  text-align: left;
+  position: absolute;
+  left: 20px;
+  top: 20px; }
+  @media (min-width: 61rem) {
+    #mobile-left-link {
+      display: none; } }
+  #mobile-left-link li {
+    padding: 0; }
+
 #blog-menu {
-  position: fixed;
-  margin-top: 62px;
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid #121a25;
-  background-color: #ffffff;
-  z-index: 99998; }
+  display: none; }
+  @media (min-width: 61rem) {
+    #blog-menu {
+      display: block;
+      position: fixed;
+      margin-top: 62px;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #121a25;
+      background-color: #ffffff;
+      z-index: 99998; } }
   #blog-menu ul {
     list-style: none;
     margin: 0;
     padding-left: 0; }
     #blog-menu ul li {
-      padding: 1.5em 2.5em 1em;
+      padding: 1.5em 3% 1em;
       display: inline-block;
       position: relative;
       font-style: italic; }
@@ -765,7 +784,11 @@ a {
     padding-left: 0; }
     .main-navigation ul li,
     .banner ul li {
-      padding: 1.5em 10%; }
+      padding: 1.5em 8%; }
+      @media (min-width: 79rem) {
+        .main-navigation ul li,
+        .banner ul li {
+          padding: 1.5em 10%; } }
     .main-navigation ul ul,
     .banner ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -819,35 +842,21 @@ a {
   display: block;
   float: left; }
 
+ul.sub-menu {
+  padding-left: 2.5em; }
+
 .banner {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: none;
-  padding-bottom: 1em; }
-
-.banner--clone {
-  /* Required styles */
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: auto;
-  background-color: #121a25;
-  padding: 1em 2em;
-  /* Translate -100% to move off screen */
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
-  /* Animations */
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out; }
+  background: none; }
 
 .banner--stick {
-  /* Translate back to 0%; */
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  transform: translateY(0%); }
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  background-color: #121a25;
+  z-index: 99999; }
 
 .footer-navigation {
   -webkit-column-count: 2;
@@ -890,7 +899,7 @@ a {
   top: 0;
   height: 100%;
   z-index: 999999;
-  width: 260px;
+  width: 360px;
   overflow-x: hidden;
   overflow-y: auto;
   font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
@@ -910,10 +919,10 @@ a {
 
 .sidr.right {
   left: auto;
-  right: -260px; }
+  right: -360px; }
 
 .sidr.left {
-  left: -260px;
+  left: -360px;
   right: auto; }
 
 .sidr h1,
@@ -942,8 +951,11 @@ a {
 
 .sidr ul {
   display: block;
-  margin: 80px 0 15px;
+  margin: 30px 0;
   padding: 0; }
+
+.sidr ul.sub-menu {
+  padding-left: 2.5em; }
 
 .sidr ul li {
   display: block;
@@ -1452,8 +1464,11 @@ a {
         margin: 0 auto 25px;
         background-color: #dcddde; }
     .about-me .left .about-text span {
-      padding-bottom: 8em;
+      padding-bottom: 5%;
       display: block; }
+      @media (min-width: 60rem) {
+        .about-me .left .about-text span {
+          padding-bottom: 8em; } }
   .about-me:after {
     content: "";
     display: table;

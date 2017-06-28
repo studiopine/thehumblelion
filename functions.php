@@ -51,6 +51,7 @@ function lion_setup() {
 		'menu-3' => esc_html__( 'Mobile', 'lion' ),
 		'menu-4' => esc_html__( 'Footer', 'lion' ),
 		'menu-5' => esc_html__( 'Blog Categories', 'lion' ),
+		'menu-6' => esc_html__( 'Mobile Left', 'lion' )
 	) );
 
 	/*
@@ -209,17 +210,23 @@ function lion_comment($comment, $args, $depth) {
  * Enqueue scripts and styles.
  */
 function lion_scripts() {
-	wp_enqueue_style( 'lion-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'lion-headhesive', get_template_directory_uri() . '/js/headhesive.js', array(), true );
-
-	wp_enqueue_script( 'lion-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'lion-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script ( 'sidrjs' , get_template_directory_uri() . '/js/jquery.sidr.min.js', array( 'jquery' ), '1', true );
 	
 	wp_enqueue_script ( 'sidrinit' , get_template_directory_uri() . '/js/sidr-init.js', array( 'sidrjs' ), '1', true );
+
+	if ( is_front_page() ) {
+		wp_enqueue_script ( 'waypoints' , get_template_directory_uri() . '/js/noframework.waypoints.min.js', array( 'jquery' ), '1', true );
+
+		wp_enqueue_script ( 'sticky' , get_template_directory_uri() . '/js/sticky.min.js', array( 'waypoints' ), '1', true );
+
+	}
+
+	wp_enqueue_style( 'lion-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'lion-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'lion-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -227,25 +234,16 @@ function lion_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lion_scripts' );
 
+
 function lion_footer_js() { 
 
 if ( is_front_page() ): ?>
 
 	<script>
 
-        // Set options
-        var options = {
-            offset: '#showHere',
-            offsetSide: 'top',
-            classes: {
-                clone:   'banner--clone',
-                stick:   'banner--stick',
-                unstick: 'banner--unstick'
-            }
-        };
-
-        // Initialise with options
-        var banner = new Headhesive('.banner', options);
+		var sticky = new Waypoint.Sticky({
+		  element: $('.banner')[0]
+		})
 
     </script>
 
