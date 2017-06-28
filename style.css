@@ -435,18 +435,16 @@ input[type="reset"] {
   font-size: 14px;
   padding: 15px 90px;
   width: 100%;
-  max-width: 100%; }
-  button:hover, button:active, button:focus,
+  max-width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out; }
+  button:hover,
   input[type="button"]:hover,
-  input[type="button"]:active,
-  input[type="button"]:focus,
   input[type="submit"]:hover,
-  input[type="submit"]:active,
-  input[type="submit"]:focus,
-  input[type="reset"]:hover,
-  input[type="reset"]:active,
-  input[type="reset"]:focus {
-    opacity: 0.6; }
+  input[type="reset"]:hover {
+    opacity: 0.8; }
 
 .form-wrapper {
   text-align: center;
@@ -692,15 +690,17 @@ ul.comment-list {
 --------------------------------------------------------------*/
 a {
   color: #7d5a46;
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s linear;
+  -moz-transition: opacity 0.35s linear;
+  transition: opacity 0.35s linear; }
+  a:hover {
+    opacity: 0.8; }
+  a:hover, a:active {
+    color: #7d5a46; }
   a:visited {
     color: #7d5a46; }
-  a:hover, a:focus, a:active {
-    color: #7d5a46; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
 
 .tg-ajax-button span {
   color: white !important;

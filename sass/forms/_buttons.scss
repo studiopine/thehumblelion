@@ -14,10 +14,14 @@ input[type="reset"] {
 	padding: 15px 90px;
 	width: 100%;
 	max-width: 100%;
-	&:hover,
-	&:active,
-	&:focus {
-		opacity: 0.6;
+
+	opacity: 1;
+	-webkit-transition: opacity 0.35s ease-in-out;
+	-moz-transition: opacity 0.35s ease-in-out;
+	transition: opacity 0.35s ease-in-out;
+
+	&:hover {
+		opacity: 0.8;
 	}
 }
 
