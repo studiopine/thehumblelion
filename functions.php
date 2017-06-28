@@ -241,7 +241,6 @@ function insert_fb_in_head() {
 		return;
         echo '<meta property="fb:admins" content="365529013832228"/>';
         echo '<meta property="og:title" content="' . get_the_title() . '"/>';
-        echo '<meta property="og:type" content="article"/>';
         echo '<meta property="og:url" content="' . get_permalink() . '"/>';
         echo '<meta property="og:site_name" content="The Humble Lion"/>';
 	if(!has_post_thumbnail( $post->ID )) { //the post does not have featured image, use a default image
