@@ -227,6 +227,18 @@ function lion_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lion_scripts' );
 
+// Add Facebook meta tags to the header
+function lion_facebook_header() { ?>
+	
+	<meta property=”og:url content=”<?php echo esc_url( home_url( '/' ) ); ?>” />
+	<meta property=”og:image” content=”<?php header_image(); ?>” />
+	<meta property=”og:title” content=”<?php bloginfo( 'name' ); ?>” />
+	<meta property=”og:description” content=”<?php the_field('tagline', 'option'); ?>” />
+
+<?php
+}
+
+add_action( 'wp_header', 'lion_facebook_header' );
 
 // To add js to the footer
 // function lion_footer_js() { 
