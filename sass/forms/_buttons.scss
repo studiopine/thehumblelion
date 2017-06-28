@@ -34,23 +34,19 @@ input[type="reset"] {
 .blog .form-wrapper {
 	margin-bottom: 0;
 }
-.thl-form {
+.thl-form ,
+.contact-form {
 	padding: 0 2em;
+	max-width: 650px;
+	margin: 0 auto;
+	// padding-left: 2em;
+	// padding-right: 2em;
 	// @include breakpoint($aboutme) {
 	// 	padding: 0 $form-padding;
 	// }
 }
-.newsletter-form {
-	padding: 0 2em;
-	@include breakpoint($aboutme) {
-		padding: 0 $section-padding;
-	}
-}
+
 .contact-form {
-	max-width: 650px;
-	padding-left: 2em;
-	padding-right: 2em;
-	margin: 0 auto;
 	button,
 	input[type="button"],
 	input[type="submit"],
@@ -58,21 +54,31 @@ input[type="reset"] {
 		background: $leather;
 		width: 100% !important;
 	}
-	// .field-wrap input[type="submit"], 
-	// .field-wrap input[type="button"], 
-	// .field-wrap button {
-	// 	width: 100% !important;
-	// }
+}
+
+.newsletter-form {
+	padding: 0 2em;
+	@include breakpoint($aboutme) {
+		width: span(10 of 12);
+		margin: 0 auto;
+	}
 }
 
 .list-checkbox-wrap {
 	padding: 50px 0 0;
 	margin: 0 auto;
 	li {
-		width: 1/3 * 100%;
-		float: left;
 		text-align: left;
 		font-size: 18px;
+		@include breakpoint($wide) {
+			@include span(4 of 12);
+		}
+		@include breakpoint($aboutme $wide) {
+			@include span(6 of 12);
+		}
+		// width: 1/3 * 100%;
+		// float: left;
+
 	}
 }
 .list-radio-wrap .nf-field-element li label, 

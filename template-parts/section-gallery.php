@@ -1,19 +1,23 @@
 <div class="<?php if ( is_front_page() ) : ?>home-gallery<?php else : ?>gallery<?php endif; ?> section">
 	<div class="gallery-heading">
-		
-		<?php 
+	
+		<div class="heading-left">
+			<?php 
 
-		if ( get_sub_field('heading') ) { ?>
+			if ( get_sub_field('heading') ) { ?>
 
-			<h1><?php the_sub_field('heading'); ?></h1>
+				<h1><?php the_sub_field('heading'); ?></h1>
 
-		<?php }
+			<?php }
 
-		if ( get_sub_field('subheading') ) { ?>
+			if ( get_sub_field('subheading') ) { ?>
 
-			<h4><?php the_sub_field('subheading'); ?></h4>
+				<h4><?php the_sub_field('subheading'); ?></h4>
 
-		<?php }; ?>
+			<?php }; ?>
+		</div>
+
+		<div class="heading-right"><hr></div>
 
 	</div>
 

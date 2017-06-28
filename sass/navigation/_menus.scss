@@ -5,26 +5,27 @@
 #left-menu,
 #right-menu {
 	display: none;
+	width: 45%;
+	text-align: center;
+	@include breakpoint($aboutme) {
+		display: block;
+	}
 }
-// #left-menu {
-// 	float: left;
-// 	width: 45%;
-// 	text-align: center;
-// }
-// #right-menu {
-// 	float: right;
-// 	width: 45%;
-// 	text-align: center;
-// }
+#left-menu {
+	float: left;
+}
 #center-menu {
-	// float: left;
-	// width: 10%;
+	float: left;
+	width: 10%;
+}
+#right-menu {
+	float: right;
 }
 
 #nav-toggle {
-  // @include breakpoint($footer) {
-  //   display: none;
-  // }
+  @include breakpoint($footer) {
+    display: none;
+  }
   text-align: right;
 }
 
