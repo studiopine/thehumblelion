@@ -10,8 +10,17 @@
   font-weight:  700;
 }
 
+@font-face {
+    font-family: 'shopping_scriptregular';
+    src: url('inc/fonts/shopping_script-webfont.woff2') format('woff2'),
+         url('inc/fonts/shopping_script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $font__main: "adobe-caslon-pro", Georgia, Times, "Times New Roman", serif;
 $font__sub: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+$font__sig: "shopping_scriptregular";
 $font__code: Georgia, Times, "Times New Roman", serif;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;

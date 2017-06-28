@@ -49,6 +49,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   /* Legacy iOS */
   font-style: normal;
   font-weight: 700; }
+@font-face {
+  font-family: 'shopping_scriptregular';
+  src: url("inc/fonts/shopping_script-webfont.woff2") format("woff2"), url("inc/fonts/shopping_script-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -285,6 +290,10 @@ h5 {
 p {
   margin-bottom: 1.5em;
   -webkit-margin-before: 0; }
+
+.thl-script {
+  font-family: "shopping_scriptregular";
+  font-size: 3em; }
 
 .entry-title a,
 .entry-title a:visited {
