@@ -239,7 +239,7 @@ function insert_fb_in_head() {
 	global $post;
 	if ( !is_singular()) //if it is not a post or a page
 		return;
-        echo '<meta property="fb:admins" content="thehumblelionblog"/>';
+        echo '<meta property="fb:admins" content="365529013832228"/>';
         echo '<meta property="og:title" content="' . get_the_title() . '"/>';
         echo '<meta property="og:type" content="article"/>';
         echo '<meta property="og:url" content="' . get_permalink() . '"/>';
