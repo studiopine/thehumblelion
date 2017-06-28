@@ -62,7 +62,10 @@
 		padding: 150px 0 0;
 	}
 	article {
-		padding-bottom: 150px;
+		padding-bottom: 2em;
+		@include breakpoint($footer) {
+			padding-bottom: 150px;
+		}
 	}
 	a.more-link {
 		font-family: $font__sub;
