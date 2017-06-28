@@ -1,3 +1,7 @@
+#mobile-menu {
+  display: none;
+}
+
 .sidr {
   display: block;
   position: fixed;
@@ -14,6 +18,9 @@
   background: #f8f8f8;
   color: #333;
   padding: 40px 0;
+  #mobile-menu {
+    display: block;
+  }
   // @include media-above($break-large) {
   //   display: none;
   // }

@@ -929,6 +929,9 @@ ul.sub-menu {
 /*--------------------------------------------------------------
 ## Sidr
 --------------------------------------------------------------*/
+#mobile-menu {
+  display: none; }
+
 .sidr {
   display: block;
   position: fixed;
@@ -945,6 +948,8 @@ ul.sub-menu {
   background: #f8f8f8;
   color: #333;
   padding: 40px 0; }
+  .sidr #mobile-menu {
+    display: block; }
 
 .sidr .sidr-inner {
   padding: 0 0 15px; }
