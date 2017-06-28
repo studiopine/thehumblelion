@@ -1265,7 +1265,10 @@ ul.sub-menu {
     clear: both; }
 
 #main {
-  padding-top: 62px; }
+  padding-top: 0; }
+  @media (min-width: 46rem) {
+    #main {
+      padding-top: 62px; } }
 
 .home #main {
   padding-top: 0; }

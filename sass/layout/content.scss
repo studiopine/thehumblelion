@@ -3,7 +3,10 @@
 }
 
 #main {
-	padding-top: 62px;
+	padding-top: 0;
+	@include breakpoint($footer) {
+		padding-top: 62px;
+	}
 }
 
 .home #main {
