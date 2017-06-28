@@ -29,7 +29,40 @@
 
 	<header id="masthead" class="site-header" role="banner">		
 
-		<nav id="site-navigation" class="<?php if ( is_front_page() ): ?>banner<?php else : ?>main-navigation<?php endif; ?>" role="navigation">
+		<!-- Sticky header for home page -->
+
+		<?php if ( is_front_page() ): ?>
+
+			<nav id="banner" class="main-navigation" role="navigation">
+
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-6', 'menu_id' => 'mobile-left-link' ) ); ?>
+
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'left-menu' ) ); ?>
+
+	            <?php if ( get_theme_mod( 'lion_logo' ) ) : ?>
+	            	<div id="center-menu">
+		                <div id="site-logo">
+		                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>
+		                </div>
+	                </div>
+	            <?php else : ?>
+	                <hgroup>
+	                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	                </hgroup>
+	            <?php endif; ?>
+
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'right-menu' ) ); ?>
+
+		        <a id="nav-toggle" href="#sidr">Menu</a>
+
+			</nav>
+
+		<?php else: ?>
+		<?php endif; ?>
+
+		<!-- End sticky header for home page -->
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
 
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-6', 'menu_id' => 'mobile-left-link' ) ); ?>
 

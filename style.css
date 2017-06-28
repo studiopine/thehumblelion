@@ -837,19 +837,20 @@ a {
     table-layout: fixed;
     clear: both; }
 
-.main-navigation {
+.main-navigation,
+#banner {
   position: fixed;
   display: block;
   float: left; }
 
-ul.sub-menu {
-  padding-left: 2.5em; }
-
-.banner {
+.home #site-navigation {
   position: absolute;
   bottom: 0;
   left: 0;
   background: none; }
+
+ul.sub-menu {
+  padding-left: 2.5em; }
 
 .banner--stick {
   position: fixed;

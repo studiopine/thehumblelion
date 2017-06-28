@@ -211,18 +211,11 @@ function lion_comment($comment, $args, $depth) {
  */
 function lion_scripts() {
 
+	wp_enqueue_style( 'lion-style', get_stylesheet_uri() );
+
 	wp_enqueue_script ( 'sidrjs' , get_template_directory_uri() . '/js/jquery.sidr.min.js', array( 'jquery' ), '1', true );
 	
 	wp_enqueue_script ( 'sidrinit' , get_template_directory_uri() . '/js/sidr-init.js', array( 'sidrjs' ), '1', true );
-
-	if ( is_front_page() ) {
-		wp_enqueue_script ( 'waypoints' , get_template_directory_uri() . '/js/noframework.waypoints.min.js', array( 'jquery' ), '1', true );
-
-		wp_enqueue_script ( 'sticky' , get_template_directory_uri() . '/js/sticky.min.js', array( 'waypoints' ), '1', true );
-
-	}
-
-	wp_enqueue_style( 'lion-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'lion-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -235,26 +228,11 @@ function lion_scripts() {
 add_action( 'wp_enqueue_scripts', 'lion_scripts' );
 
 
-function lion_footer_js() { 
+// To add js to the footer
+// function lion_footer_js() { 
 
-if ( is_front_page() ): ?>
+// add_action( 'wp_footer', 'lion_footer_js' );
 
-	<script>
-
-		var sticky = new Waypoint.Sticky({
-		  element: $('.banner')[0]
-		})
-
-    </script>
-
-<?php 
-else :
-endif; ?>
-
-<?php
-}
-
-add_action( 'wp_footer', 'lion_footer_js' );
 
 /**
  * Implement the Custom Header feature.

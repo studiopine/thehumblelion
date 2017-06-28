@@ -5,6 +5,42 @@
  * navigation support for dropdown menus.
  */
 
+// jQuery(document).ready(function($){
+//   // Check the initial Poistion of the Sticky Header
+//   var stickyHeaderTop = $('#page').offset().top;
+
+//   $('#banner').hide();
+
+//   $(window).scroll(function(){
+
+// 	var heroImg = $('.thl-hero-img').height();
+
+//     if ($(this).scrollTop() > heroImg) {
+//       $('#banner').slideDown(500);
+//     } else {
+//       $('#banner').slideUp(500);
+//     }
+//   });
+// });
+
+jQuery(document).ready(function($){
+  // Check the initial Poistion of the Sticky Header
+  var stickyHeaderTop = $('#page').offset().top;
+
+  $('#banner').hide();
+
+  $(window).scroll(function(){
+
+	var heroImg = $('.thl-hero-img').height();
+
+    if ($(this).scrollTop() > heroImg) {
+      $('#banner').fadeIn(800);
+    } else {
+      $('#banner').fadeOut(800);
+    }
+  });
+});
+
 ( function() {
 
 	var container, button, menu, links, i, len;
