@@ -10,8 +10,17 @@
 	.thl-hero-img {
 	    display: block;
 	    width: 100%;
-	    height: 100vh;
+	    height: 400px;
+	    margin-top: 62px;
 	    overflow: hidden;
+	    @include breakpoint($hero-smaller) {
+	    	height: 490px;
+	    	margin-top: 62px;
+	    }
+	    @include breakpoint($hero-medium) {
+		    height: 100vh;
+		    margin-top: 0;
+	    }
 	    .inner {
 		    display: table;
 		    width: 100%;

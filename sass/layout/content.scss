@@ -216,7 +216,7 @@
 // Home Page ––– Tagline
 
 #tagline {
-	padding: 125px 2em 40px;
+	padding: 4em 2em 0;
 	#thl-logomark {
 		display: none;
 	}
@@ -228,6 +228,7 @@
 	}
 	@include breakpoint($footer) {
 		width: span(10 of 12);
+		padding: 125px 2em 40px;
 		margin: 0 auto;
 	}
 	@include breakpoint($aboutme) {

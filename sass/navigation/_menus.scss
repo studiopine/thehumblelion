@@ -172,18 +172,28 @@
 	}
 }
 
-.main-navigation,
-#banner {
+.main-navigation {
 	position: fixed;
 	display: block;
 	float: left;
 }
 
+#banner {
+	display: none;
+	@include breakpoint($hero-medium) {
+		position: fixed;
+		display: block;
+		float: left;
+	}	
+}
+
 .home #site-navigation {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background: none;	
+    @include breakpoint($hero-medium) {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: none;
+    }	
 }
 
 // #responsive-menu ul ul {
