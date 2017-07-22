@@ -592,6 +592,26 @@ textarea {
   textarea:focus {
     color: #111; }
 
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="url"],
+.contact-form input[type="password"],
+.contact-form input[type="search"],
+.contact-form input[type="number"],
+.contact-form input[type="tel"],
+.contact-form input[type="range"],
+.contact-form input[type="date"],
+.contact-form input[type="month"],
+.contact-form input[type="week"],
+.contact-form input[type="time"],
+.contact-form input[type="datetime"],
+.contact-form input[type="datetime-local"],
+.contact-form input[type="color"],
+.contact-form textarea {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-bottom: 0 !important; }
+
 select {
   border: 1px solid #231f20; }
 
@@ -636,7 +656,8 @@ h2.comments-title {
 #comments label,
 #comments span,
 #comments .comment-notes {
-  display: none; }
+  display: none;
+  line-height: 20px; }
 #comments button,
 #comments input[type="button"],
 #comments input[type="submit"],
