@@ -383,6 +383,42 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
+.sharedaddy.sd-sharing-enabled {
+  text-align: center; }
+  .sharedaddy.sd-sharing-enabled .sd-title {
+    font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #121a25; }
+  .sharedaddy.sd-sharing-enabled ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+  .sharedaddy.sd-sharing-enabled a,
+  .sharedaddy.sd-sharing-enabled a:visited {
+    color: white; }
+  .sharedaddy.sd-sharing-enabled a.sd-button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    border-radius: 0;
+    color: #fff;
+    background: #233a4a;
+    border: 2px solid #233a4a;
+    box-shadow: none;
+    text-shadow: none;
+    line-height: 23px;
+    padding: 5px 10px; }
+  .sharedaddy.sd-sharing-enabled .share-count {
+    display: none; }
+
 ul, ol {
   margin: 0 0 1.5em 3em; }
 
@@ -1247,7 +1283,8 @@ ul.sub-menu {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 1.5em 0 0;
+  position: relative; }
 
 .page-links {
   clear: both;

@@ -1,3 +1,47 @@
+// Jetpack Share Buttons
+
+.sharedaddy.sd-sharing-enabled {
+	text-align: center;
+	.sd-title {
+		font-family: $font__sub;
+		font-size: 12px;
+		line-height: 28px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: $passportblue;		
+	}
+	ul {
+		list-style: none;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+	}
+	a,
+	a:visited {
+		color: white;
+	}
+	a.sd-button {
+		text-decoration: none;
+		display: inline-block;
+		margin: 0 5px 5px 0;
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-weight: 400;
+		border-radius: 0;
+		color: #fff;
+		background: $dustyblue;
+		border: 2px solid $dustyblue;
+		box-shadow: none;
+		text-shadow: none;
+		line-height: 23px;
+		padding: 5px 10px;
+	}
+	.share-count {
+		display: none;
+	}
+}
+
 ul, ol {
 	margin: 0 0 1.5em 3em;
 }
