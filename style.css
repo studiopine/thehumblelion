@@ -383,24 +383,24 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
-.sharedaddy.sd-sharing-enabled {
+.sharedaddy {
   text-align: center; }
-  .sharedaddy.sd-sharing-enabled .sd-title {
+  .sharedaddy .sd-title {
     font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     font-size: 12px;
     line-height: 28px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #121a25; }
-  .sharedaddy.sd-sharing-enabled ul {
+  .sharedaddy ul {
     list-style: none;
     text-align: center;
     padding: 0;
     margin: 0; }
-  .sharedaddy.sd-sharing-enabled a,
-  .sharedaddy.sd-sharing-enabled a:visited {
+  .sharedaddy a,
+  .sharedaddy a:visited {
     color: white; }
-  .sharedaddy.sd-sharing-enabled a.sd-button {
+  .sharedaddy a.sd-button {
     text-decoration: none;
     display: inline-block;
     margin: 0 5px 5px 0;
@@ -416,7 +416,7 @@ hr {
     text-shadow: none;
     line-height: 23px;
     padding: 5px 10px; }
-  .sharedaddy.sd-sharing-enabled .share-count {
+  .sharedaddy .share-count {
     display: none; }
 
 ul, ol {

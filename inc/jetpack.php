@@ -56,7 +56,7 @@ function jeherve_remove_all_jp_css() {
   wp_deregister_style( 'infinity-twentytwelve' ); // Infinite Scroll - Twentytwelve Theme
   wp_deregister_style( 'noticons' ); // Notes
   // wp_deregister_style( 'post-by-email' ); // Post by Email
-  wp_deregister_style( 'publicize' ); // Publicize
+  // wp_deregister_style( 'publicize' ); // Publicize
   // wp_deregister_style( 'sharedaddy' ); // Sharedaddy
   // wp_deregister_style( 'sharing' ); // Sharedaddy Sharing
   wp_deregister_style( 'stats_reports_css' ); // Stats
