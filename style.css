@@ -1714,6 +1714,9 @@ ul.sub-menu {
       clear: both;
       content: ''; } }
 
+.services {
+  margin-bottom: 0; }
+
 .services,
 .categories {
   text-align: center; }
@@ -1769,6 +1772,20 @@ ul.sub-menu {
   .services i,
   .categories i {
     font-weight: 600; }
+
+.press {
+  text-align: center; }
+  .press ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .press ul:after {
+      content: "";
+      display: table;
+      table-layout: fixed;
+      clear: both; }
+  .press img {
+    max-width: 200px; }
 
 #colophon {
   padding: 110px 2em 40px;

@@ -446,6 +446,10 @@
 	}
 }
 
+.services {
+	margin-bottom: 0;
+}
+
 .services,
 .categories {
 	// padding: 100px 0 75px;
@@ -484,4 +488,21 @@
 		font-weight: 600;
 	}
 
+}
+
+// PRESS PAGE
+
+.press {
+	text-align: center;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		&:after {
+			@include clearfix;
+		}
+	}
+	img {
+		max-width: 200px;
+	}
 }

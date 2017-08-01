@@ -29,13 +29,17 @@ get_header(); ?>
 					// loop through all the rows of flexible content
 					while ( have_rows('contact_page_content') ) : the_row();
 
-					// PHOTO LEFT TEXT RIGHT
+					// SERVICES
 					if( get_row_layout() == 'work_section' )
 						get_template_part('template-parts/section', 'services');
 
-					// TWO COLUMN LIST
+					// FORM
 					if( get_row_layout() == 'form' )
 						get_template_part('template-parts/section', 'form');
+
+					// PRESS
+					if( get_row_layout() == 'press' )
+						get_template_part('template-parts/section', 'press');
 
 					// FULL WIDTH
 					if( get_row_layout() == 'full_width_text' )

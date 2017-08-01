@@ -24,7 +24,7 @@ if ( post_password_required() ) {
 
 	<?php
 	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
+	if ( comments_open() ) : ?>
 		<?php
 			//printf( // WPCS: XSS OK.
 				//esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'lion' ) ),
