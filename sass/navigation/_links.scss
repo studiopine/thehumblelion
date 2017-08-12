@@ -57,24 +57,6 @@ a {
 		}
 	}
 }
-.page-navigation {
-	text-align: center;
-	margin-bottom: 150px;
-	font-family: $font__sub;
-	font-size: 12px;
-	line-height: 28px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	a {
-		color: $passportblue;
-	}
-	.nav-previous {
-		&:after {
-			display: inline-block;
-			padding: 0 0.4em 0 1em;
-		}
-	}
-}
 .main-navigation a {
 	color: $beige;
 }

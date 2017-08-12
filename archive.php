@@ -59,7 +59,7 @@ get_header(); ?>
 
 					</section>
 
-					<div class="page-navigation">
+					<div class="post-navigation">
 
 						<?php if( get_previous_posts_link() ) : ?>
 

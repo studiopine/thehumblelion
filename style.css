@@ -789,20 +789,6 @@ a {
     display: inline-block;
     padding: 0 0.4em 0 1em; }
 
-.page-navigation {
-  text-align: center;
-  margin-bottom: 150px;
-  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-  font-size: 12px;
-  line-height: 28px;
-  letter-spacing: 2px;
-  text-transform: uppercase; }
-  .page-navigation a {
-    color: #121a25; }
-  .page-navigation .nav-previous:after {
-    display: inline-block;
-    padding: 0 0.4em 0 1em; }
-
 .main-navigation a {
   color: #dbdcdd; }
 
