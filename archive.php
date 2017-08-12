@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: Archives
+*/
 /**
  * The template for displaying archive pages
  *
@@ -12,34 +15,58 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) : ?>
+			<div class="section">
 
-<!-- 			<header class="page-header">
-				<h4>Category</h4>
-				<!-- <h1><?php echo get_archive_title(); ?></h1> -->
-			</header><!-- .page-header -->
+				<header class="page-header">
+					<h4>Explore</h4>
+					<h1><?php the_title(); ?></h1>
+				</header><!-- .page-header -->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+				<?php
+				// the query
+				$wp_query = new 
+				WP_Query(
+				array(
+					'post_type'=>'post',
+					'post_status'=>'publish',
+					'posts_per_page'=> 12,
+					'paged' => $paged
+				));
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				if ( $wp_query->have_posts() ): ?>
 
-			endwhile;
+					<section>
 
-			the_posts_navigation();
+					<?php while ( $wp_query->have_posts() ) : $wp_query->the_post();
 
-		else :
+						get_template_part( 'template-parts/content-archive', get_post_format() );
 
-			get_template_part( 'template-parts/content', 'none' );
+					endwhile; ?>
 
-		endif; ?>
+					</section>
+
+					<div class="page-navigation">
+
+						<?php if( get_previous_posts_link() ) : ?>
+
+							<span class="nav-previous"><?php previous_posts_link( 'Previous' ); ?></span>
+
+						<?php 
+						endif; ?>
+
+						<span class="nav-next"><?php next_posts_link( 'Next' ); ?></span>
+
+					</div>
+
+				<?php wp_reset_postdata();
+
+				else :
+
+					get_template_part( 'template-parts/content', 'none' );
+
+				endif; ?>
+
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

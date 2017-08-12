@@ -144,6 +144,36 @@
 	}
 }
 
+.page-template-archive {
+	section:after {
+		@include clearfix;
+	}
+	h5.entry-title {
+		min-height: 48px;
+	}
+	article {
+		@include breakpoint($aboutme) {
+			@include span(4 of 12);
+			min-height: 230px;
+			&:nth-child(3n) {
+				@include span(4 of 12 last);
+				&:after {
+					@include clearfix;
+				}
+			}
+		}
+		@include breakpoint($between) {
+			@include span(6 of 12);
+			&:nth-child(2n) {
+				@include span(6 of 12 last);
+				&:after {
+					@include clearfix;
+				}
+			}
+		}
+	}
+}
+
 .yarpp-wrapper {
 	background-color: $lightgrey;
 	margin-bottom: 100px !important;
@@ -493,6 +523,7 @@
 // PRESS PAGE
 
 .press {
+	margin-top: 0;
 	text-align: center;
 	ul {
 		list-style: none;
@@ -500,6 +531,29 @@
 		padding: 0;
 		&:after {
 			@include clearfix;
+		}
+		li {
+			padding: 0 1em 1em;
+			@include breakpoint($aboutme) {
+				@include span(4 of 12);
+				padding: 0 1em 2em;
+				&:nth-child(3n) {
+					@include span(4 of 12 last);
+					&:after {
+						@include clearfix;
+					}
+				}
+			}
+			@include breakpoint($between) {
+				@include span(6 of 12);
+				padding: 0 1em 2em;
+				&:nth-child(2n) {
+					@include span(6 of 12 last);
+					&:after {
+						@include clearfix;
+					}
+				}
+			}
 		}
 	}
 	img {

@@ -2,9 +2,9 @@ a {
 	color: $color__link;
 	text-decoration: none;
 	opacity: 1;
-	-webkit-transition: opacity 0.35s linear;
-	-moz-transition: opacity 0.35s linear;
-	transition: opacity 0.35s linear;
+	-webkit-transition: opacity 0.25s linear;
+	-moz-transition: opacity 0.25s linear;
+	transition: opacity 0.25s linear;
 
 	&:hover {
 		opacity: 0.8;
@@ -52,6 +52,24 @@ a {
 	.nav-previous {
 		&:after {
 			content: '/';
+			display: inline-block;
+			padding: 0 0.4em 0 1em;
+		}
+	}
+}
+.page-navigation {
+	text-align: center;
+	margin-bottom: 150px;
+	font-family: $font__sub;
+	font-size: 12px;
+	line-height: 28px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	a {
+		color: $passportblue;
+	}
+	.nav-previous {
+		&:after {
 			display: inline-block;
 			padding: 0 0.4em 0 1em;
 		}

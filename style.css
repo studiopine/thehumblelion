@@ -475,9 +475,9 @@ input[type="reset"] {
   width: 100%;
   max-width: 100%;
   opacity: 1;
-  -webkit-transition: opacity 0.35s ease-in-out;
-  -moz-transition: opacity 0.35s ease-in-out;
-  transition: opacity 0.35s ease-in-out; }
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out; }
   button:hover,
   input[type="button"]:hover,
   input[type="submit"]:hover,
@@ -656,6 +656,10 @@ select {
 textarea {
   width: 100%; }
 
+input[type="search"] {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
 input[type=checkbox] {
   display: none; }
 
@@ -752,9 +756,9 @@ a {
   color: #7d5a46;
   text-decoration: none;
   opacity: 1;
-  -webkit-transition: opacity 0.35s linear;
-  -moz-transition: opacity 0.35s linear;
-  transition: opacity 0.35s linear; }
+  -webkit-transition: opacity 0.25s linear;
+  -moz-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear; }
   a:hover {
     opacity: 0.8; }
   a:hover, a:active {
@@ -782,6 +786,20 @@ a {
     color: #121a25; }
   .post-navigation .nav-previous:after {
     content: '/';
+    display: inline-block;
+    padding: 0 0.4em 0 1em; }
+
+.page-navigation {
+  text-align: center;
+  margin-bottom: 150px;
+  font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+  .page-navigation a {
+    color: #121a25; }
+  .page-navigation .nav-previous:after {
     display: inline-block;
     padding: 0 0.4em 0 1em; }
 
@@ -853,7 +871,7 @@ a {
     margin: 0;
     padding-left: 0; }
     #blog-menu ul li {
-      padding: 1.5em 3% 1em;
+      padding: 1.5em 2.25% 1em;
       display: inline-block;
       position: relative;
       font-style: italic; }
@@ -1476,6 +1494,43 @@ ul.sub-menu {
   #featured-posts article header {
     margin: 0 auto; }
 
+.page-template-archive section:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both; }
+.page-template-archive h5.entry-title {
+  min-height: 48px; }
+@media (min-width: 60rem) {
+  .page-template-archive article {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+    min-height: 230px; }
+    .page-template-archive article:nth-child(3n) {
+      width: 32.20339%;
+      float: right;
+      margin-right: 0; }
+      .page-template-archive article:nth-child(3n):after {
+        content: "";
+        display: table;
+        table-layout: fixed;
+        clear: both; } }
+@media (min-width: 46rem) and (max-width: 60rem) {
+  .page-template-archive article {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%; }
+    .page-template-archive article:nth-child(2n) {
+      width: 49.15254%;
+      float: right;
+      margin-right: 0; }
+      .page-template-archive article:nth-child(2n):after {
+        content: "";
+        display: table;
+        table-layout: fixed;
+        clear: both; } }
+
 .yarpp-wrapper {
   background-color: #ebebec;
   margin-bottom: 100px !important;
@@ -1774,6 +1829,7 @@ ul.sub-menu {
     font-weight: 600; }
 
 .press {
+  margin-top: 0;
   text-align: center; }
   .press ul {
     list-style: none;
@@ -1784,6 +1840,38 @@ ul.sub-menu {
       display: table;
       table-layout: fixed;
       clear: both; }
+    .press ul li {
+      padding: 0 1em 1em; }
+      @media (min-width: 60rem) {
+        .press ul li {
+          width: 32.20339%;
+          float: left;
+          margin-right: 1.69492%;
+          padding: 0 1em 2em; }
+          .press ul li:nth-child(3n) {
+            width: 32.20339%;
+            float: right;
+            margin-right: 0; }
+            .press ul li:nth-child(3n):after {
+              content: "";
+              display: table;
+              table-layout: fixed;
+              clear: both; } }
+      @media (min-width: 46rem) and (max-width: 60rem) {
+        .press ul li {
+          width: 49.15254%;
+          float: left;
+          margin-right: 1.69492%;
+          padding: 0 1em 2em; }
+          .press ul li:nth-child(2n) {
+            width: 49.15254%;
+            float: right;
+            margin-right: 0; }
+            .press ul li:nth-child(2n):after {
+              content: "";
+              display: table;
+              table-layout: fixed;
+              clear: both; } }
   .press img {
     max-width: 200px; }
 
