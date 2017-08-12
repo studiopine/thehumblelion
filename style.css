@@ -1872,6 +1872,12 @@ ul.sub-menu {
               display: table;
               table-layout: fixed;
               clear: both; } }
+    .press ul li:only-child {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center; }
   .press img {
     max-width: 200px; }
 
