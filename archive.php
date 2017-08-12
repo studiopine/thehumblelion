@@ -26,7 +26,7 @@ get_header(); ?>
 					<?php } ?>
 
 					<h1><?php the_title(); ?></h1>
-					
+
 				</header><!-- .page-header -->
 
 				<?php
@@ -37,7 +37,13 @@ get_header(); ?>
 					'post_type'=>'post',
 					'post_status'=>'publish',
 					'posts_per_page'=> 12,
-					'paged' => $paged
+					'paged' => $paged,
+					'meta_query' => array(
+						array(
+							'key' 		=> '_thumbnail_id',
+							'compare' 	=> 'EXISTS'
+							)
+						)
 				));
 
 				if ( $wp_query->have_posts() ): ?>
@@ -48,7 +54,8 @@ get_header(); ?>
 
 						get_template_part( 'template-parts/content-archive', get_post_format() );
 
-					endwhile; ?>
+					endwhile;
+					wp_reset_postdata(); ?>
 
 					</section>
 
@@ -65,8 +72,9 @@ get_header(); ?>
 
 					</div>
 
-				<?php wp_reset_postdata();
+				
 
+				<?php 
 				else :
 
 					get_template_part( 'template-parts/content', 'none' );

@@ -17,5 +17,5 @@
 	</article><!-- #post-## -->
 
 <?php } else {
-	// Display nothing
+
 } ?>
