@@ -18,8 +18,15 @@ get_header(); ?>
 			<div class="section">
 
 				<header class="page-header">
-					<h4>Explore</h4>
+
+					<?php if ( get_field('subheading') ) { ?>
+
+						<h4><?php the_field('subheading'); ?></h4>
+
+					<?php } ?>
+
 					<h1><?php the_title(); ?></h1>
+					
 				</header><!-- .page-header -->
 
 				<?php
