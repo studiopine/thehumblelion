@@ -34,7 +34,11 @@ get_header(); ?>
 
 						// TWO COLUMN LIST
 						if( get_row_layout() == 'list' )
-							get_template_part('template-parts/section', 'twocolumnlist');			
+							get_template_part('template-parts/section', 'twocolumnlist');	
+
+						// Image LIST
+						if( get_row_layout() == 'list_images' )
+							get_template_part('template-parts/section', 'imageslist');			
 
 					endwhile; // close the loop of flexible content ?>
 
