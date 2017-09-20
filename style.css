@@ -1688,6 +1688,24 @@ ul.sub-menu {
           clear: both;
           content: ''; } }
 
+.imagelist-section {
+  display: none;
+  text-align: center;
+  margin: 5em 4em; }
+  @media (min-width: 46rem) {
+    .imagelist-section {
+      display: block; } }
+  .imagelist-section h3 {
+    padding-bottom: 1em; }
+  .imagelist-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    .imagelist-section ul img {
+      max-width: 150px;
+      margin: 0 auto; }
+
 .wisdom-wall .wisdom-location {
   font-family: "Katahdin Round Bold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 .wisdom-wall .wisdom-author {

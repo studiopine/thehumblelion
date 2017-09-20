@@ -1,4 +1,4 @@
-<div class="list-section">
+<div class="imagelist-section">
 	<?php 
 
 		if ( get_sub_field('list_title') ) { ?>
@@ -19,7 +19,7 @@
 		    $image = get_sub_field('image'); ?>
 
 				<li>
-				
+
 			        <a href="<?php the_sub_field('link'); ?>" target="_blank">
 
 			        <?php if(!empty($image) ): ?>
