@@ -6,7 +6,8 @@
 #right-menu {
 	display: none;
 	@include breakpoint($smaller-padding) {
-		display: block;
+		display: flex;
+		justify-content: space-evenly;
 		width: 45%;
 		text-align: center;
 	}
