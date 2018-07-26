@@ -807,19 +807,11 @@ a {
     #right-menu {
       display: flex;
       justify-content: space-evenly;
-      width: 45%;
-      text-align: center; } }
+      align-items: center;
+      height: 100%; } }
 
-#left-menu {
-  float: left; }
-
-@media (min-width: 61rem) {
-  #center-menu {
-    float: left;
-    width: 10%; } }
-
-#right-menu {
-  float: right; }
+#center-menu {
+  width: 100px; }
 
 .nav-toggle {
   text-align: right;
@@ -876,20 +868,12 @@ a {
   text-transform: uppercase;
   width: 100%;
   background-color: #121a25;
-  clear: both;
   z-index: 99999; }
   .main-navigation ul,
   .banner ul {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .main-navigation ul li,
-    .banner ul li {
-      padding: 1.5em 8%; }
-      @media (min-width: 79rem) {
-        .main-navigation ul li,
-        .banner ul li {
-          padding: 1.5em 10%; } }
     .main-navigation ul ul,
     .banner ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -914,12 +898,6 @@ a {
     .banner ul li:hover > ul,
     .banner ul li.focus > ul {
       left: auto; }
-    .main-navigation ul:after,
-    .banner ul:after {
-      content: "";
-      display: table;
-      table-layout: fixed;
-      clear: both; }
   .main-navigation li,
   .banner li {
     display: inline-block;
@@ -930,25 +908,22 @@ a {
   .banner a:visited {
     text-decoration: none;
     color: #ffffff; }
-  .main-navigation:after,
-  .banner:after {
-    content: "";
-    display: table;
-    table-layout: fixed;
-    clear: both; }
 
 .main-navigation {
   position: fixed;
-  display: block;
-  float: left; }
+  display: flex;
+  justify-content: center; }
+
+.menu-header-right-container,
+.menu-header-left-container {
+  flex: 1; }
 
 #banner {
   display: none; }
   @media (min-width: 48rem) {
     #banner {
       position: fixed;
-      display: block;
-      float: left; } }
+      display: flex; } }
 
 @media (min-width: 48rem) {
   .home #site-navigation {
@@ -1211,8 +1186,6 @@ ul.sub-menu {
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,

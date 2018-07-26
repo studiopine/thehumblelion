@@ -8,22 +8,26 @@
 	@include breakpoint($smaller-padding) {
 		display: flex;
 		justify-content: space-evenly;
-		width: 45%;
-		text-align: center;
+		align-items: center;
+		height: 100%;
 	}
-}
-#left-menu {
-	float: left;
 }
 #center-menu {
-	@include breakpoint($smaller-padding) {
-		float: left;
-		width: 10%;		
-	}
+	width: 100px;
 }
-#right-menu {
-	float: right;
-}
+
+// #left-menu {
+// 	float: left;
+// }
+// #center-menu {
+// 	@include breakpoint($smaller-padding) {
+// 		float: left;
+// 		width: 10%;
+// 	}
+// }
+// #right-menu {
+// 	float: right;
+// }
 
 .nav-toggle {
 	text-align: right;
@@ -42,7 +46,7 @@
 	top: 20px;
 	@include breakpoint($smaller-padding) {
 	display: none;
-	}	
+	}
 	li {
 		padding: 0;
 	}
@@ -86,23 +90,22 @@
 	font-size: 12px;
 	letter-spacing: 2px;
 	line-height: 26px;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 
 	width: 100%;
 	background-color: $passportblue;
-	clear: both;
 	z-index: 99999;
 
 	ul {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		li {
-			padding: 1.5em 8%;
-			@include breakpoint($larger-padding) {
-				padding: 1.5em 10%;
-			}
-		}
+		// li {
+		// 	padding: 1.5em 8%;
+		// 	@include breakpoint($larger-padding) {
+		// 		padding: 1.5em 10%;
+		// 	}
+		// }
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
@@ -140,9 +143,6 @@
 		li.focus > ul {
 			left: auto;
 		}
-		&:after {
-			@include clearfix;
-		}
 	}
 
 	li {
@@ -168,24 +168,28 @@
 	.current-menu-ancestor > a {
 	}
 
-	&:after {
-		@include clearfix;
-	}
 }
 
 .main-navigation {
 	position: fixed;
-	display: block;
-	float: left;
+	display: flex;
+	justify-content: center;
+	// padding: 0 30px;
+}
+
+.menu-header-right-container,
+.menu-header-left-container {
+    flex: 1;
 }
 
 #banner {
 	display: none;
 	@include breakpoint($hero-medium) {
 		position: fixed;
-		display: block;
-		float: left;
-	}	
+		// display: block;
+		// float: left;
+		display: flex;
+	}
 }
 
 .home #site-navigation {
@@ -194,7 +198,7 @@
 		bottom: 0;
 		left: 0;
 		background: none;
-    }	
+    }
 }
 
 // #responsive-menu ul ul {
